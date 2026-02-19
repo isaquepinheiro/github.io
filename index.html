@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tabela de Planos de Suporte – Open Source</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f8;
+            padding: 20px;
+            color: #222;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 6px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #555;
+            margin-bottom: 24px;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 1200px;
+            font-size: 14px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        th {
+            background: #ff9800;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+
+        td:first-child,
+        th:first-child {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .section {
+            background: #ffe0b2;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .yes {
+            color: #2e7d32;
+            font-weight: bold;
+        }
+
+        .no {
+            color: #c62828;
+            font-weight: bold;
+        }
+
+        .study {
+            color: #1565c0;
+            font-style: italic;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #0d47a1;
+        }
+
+        a {
+            color: #1565c0;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .cta {
+            margin: 32px auto 16px auto;
+            text-align: center;
+        }
+
+        .cta p {
+            margin-bottom: 12px;
+            color: #444;
+            font-size: 15px;
+        }
+
+        .cta a {
+            display: inline-block;
+            background: #ff9800;
+            color: #fff;
+            padding: 14px 26px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+        }
+
+        .cta a:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .plan-btn {
+            display: inline-block;
+            background: #ff9800;
+            color: #fff;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 13px;
+            text-decoration: none;
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+        }
+
+        .plan-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>📊 Tabela de Planos de Suporte – Projetos Open Source</h1>
+    <p class="subtitle">Comparativo de benefícios por plano</p>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Produto / Benefício</th>
+                    <th>Saiba mais (Vídeo)</th>
+                    <th>Delphi</th>
+                    <th>Lazarus</th>
+                    <th>Plano R$ 0,00<br>(Community)</th>
+                    <th>Plano R$ 790,00 / ano<br>(Professional)</th>
+                    <th>Plano R$ 1.490,00 / ano<br>(Enterprise)</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr class="section">
+                    <td colspan="7">Produto Comercial (Não OpenSource)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="#">Leia os termos</a></td>
+                    <td><a href="#">Leia os termos</a></td>
+                </tr>
+
+                <tr>
+                    <td>MCIBr – Direito de uso dos fontes</td>
+                    <td><a href="#">link</a></td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                    <td></td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                </tr>
+                <tr>
+                    <td>MCIBr – Direito a atualizações durante assinatura</td>
+                    <td><a href="#">link</a></td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                    <td></td>
+                    <td></td>
+                    <td class="yes">✔</td>
+                </tr>
+
+                <tr>
+                    <td>MCIBr – Suporte aos fontes</td>
+                    <td><a href="#">link</a></td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                    <td></td>
+                    <td></td>
+                    <td>1h / mês (não acumulativo)</td>
+                </tr>
+
+                <tr class="section">
+                    <td colspan="7">Produtos OpenSource Suportados</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="#">Leia os termos</a></td>
+                    <td><a href="#">Leia os termos</a></td>
+                    <td><a href="#">Leia os termos</a></td>
+                </tr>
+
+                <tr>
+                    <td>ORM4D</td>
+                    <td><a href="#">link</a></td>
+                    <td class="yes">✔</td>
+                    <td></td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                </tr>
+                <tr>
+                    <td>Evolution4D</td>
+                    <td><a href="#">link</a></td>
+                    <td class="yes">✔</td>
+                    <td></td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                </tr>
+                <tr>
+                    <td>JsonFlow4D</td>
+                    <td><a href="#">link</a></td>
+                    <td class="yes">✔</td>
+                    <td></td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                </tr>
+                <tr>
+                    <td>Nest4D</td>
+                    <td><a href="#">link</a></td>
+                    <td class="yes">✔</td>
+                    <td></td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                </tr>
+                <tr>
+                    <td>Injector4D</td>
+                    <td><a href="https://www.youtube.com/watch?v=GTdeXcMVA7k&list=PLl7xMzPp3u--nxfYS9pnKL_VU6RJlwTf_&pp=0gcJCbUEOCosWNinsAgC"
+                            target="_blank" rel="noopener noreferrer">link</a>
+                    </td>
+                    <td class="yes">✔</td>
+                    <td></td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                </tr>
+                <tr>
+                    <td>Fluent4D</td>
+                    <td><a href="#">link</a></td>
+                    <td class="yes">✔</td>
+                    <td></td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                </tr>
+                <tr>
+                    <td>CQuery4D</td>
+                    <td><a href="#">link</a></td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                </tr>
+                <tr>
+                    <td>DBEngine4D</td>
+                    <td><a href="#">link</a></td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                </tr>
+                <tr>
+                    <td>DBCompare4D</td>
+                    <td><a href="#">link</a></td>
+                    <td class="yes">✔</td>
+                    <td></td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                </tr>
+                <tr>
+                    <td>Correções Críticas</td>
+                    <td></td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                    <td>Conforme disponibilidade</td>
+                    <td>Prioritário</td>
+                    <td>Imediato</td>
+                </tr>
+                <tr>
+                    <td>Ajustes e Melhorias</td>
+                    <td></td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                    <td>Conforme roadmap</td>
+                    <td>Até 6 meses</td>
+                    <td>Imediato</td>
+                </tr>
+                <tr>
+                    <td>Valor da hora de suporte extra</td>
+                    <td></td>
+                    <td class="yes">✔</td>
+                    <td class="yes">✔</td>
+                    <td class="price">R$ 200,00</td>
+                    <td class="price">R$ 150,00</td>
+                    <td class="price">R$ 100,00</td>
+                </tr>
+
+                <tr class="section">
+                    <td colspan="7">Produtos em Estudo para Suporte (OpenSource)</td>
+                </tr>
+                <tr>
+                    <td>Horse</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="yes">✔</td>
+                </tr>
+                <tr>
+                    <td>Delphi MVC Framework</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="study">Em estudo</td>
+                </tr>
+                <tr>
+                    <td>Dext Web Framework</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="study">Em estudo</td>
+                </tr>
+
+            </tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+                <td>
+                    <a class="plan-btn" href="https://chk.eduzz.com/VWGZR66407" target="_blank">
+                        Assinar
+                    </a>
+                </td>
+
+                <td>
+                    <a class="plan-btn" href="https://chk.eduzz.com/R9JJA5RP9X" target="_blank">
+                        Assinar
+                    </a>
+                </td>
+
+                <td>
+                    <a class="plan-btn" href="https://chk.eduzz.com/D0RAZ2D19Y" target="_blank">
+                        Assinar
+                    </a>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="cta">
+        <p>Gostou dos planos e quer apoiar o projeto ou contratar suporte?</p>
+        <a href="https://wa.me/5527996502590" target="_blank">
+            👉 Tire suas dúvidas / Fale comigo no WhatsApp
+        </a>
+    </div>
+
+
+    <footer>
+        © 2026 – Planos de suporte para projetos Open Source Delphi/Lazarus
+    </footer>
+
+</body>
+
+</html>
