@@ -204,8 +204,54 @@ footer a:hover {
 table {
     border-collapse: collapse;
     width: 100%;
-    min-width: 900px;
+    min-width: 1100px;
     font-size: 0.875rem;
+}
+
+/* Language indicator columns */
+.lang-col {
+    background-color: #f1f5f9;
+    color: var(--text-muted);
+    font-size: 0.8125rem;
+    width: 70px;
+}
+
+th.lang-col {
+    background-color: #e2e8f0;
+    color: var(--text-dark);
+    font-weight: 700;
+    font-size: 0.8125rem;
+    border-right: 2px solid var(--border);
+}
+
+th.lang-col:last-of-type,
+td.lang-col:last-of-type {
+    border-right: 2px solid var(--border);
+}
+
+/* C# exclusive column */
+.csharp-col {
+    background-color: #f0fdf4 !important;
+}
+
+th.csharp-col {
+    background-color: #dcfce7 !important;
+    color: #15803d;
+}
+
+/* Enterprise badge inline */
+.badge-enterprise {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.6rem;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 20px;
+    vertical-align: middle;
+    margin-left: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
 }
 
 th,
