@@ -254,6 +254,26 @@ th.csharp-col {
     letter-spacing: 0.04em;
 }
 
+.badge-temp {
+    background: #f59e0b;
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.card.promotional {
+    border: 2px dashed var(--accent);
+    background-color: #f0f9ff;
+}
+
+.card ul li.disabled {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
 th,
 td {
     padding: 1rem;
