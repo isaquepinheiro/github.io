@@ -39,8 +39,28 @@
 
             <!-- Promocional e Temporária -->
             <div class="card promotional">
-                <h3>Promocional<span class="badge-temp">tempo limitádo</span></h3>
-                <div class="price-tag">R$ 790,00 <span>/ ano</span></div>
+                <h3>Promocional<span class="badge-temp" id="promo-badge">tempo limitado</span></h3>
+                <div class="price-tag" id="promo-price">R$ 790,00 <span>/ ano</span></div>
+                
+                <!-- Relógio Contador -->
+                <div id="countdown-container">
+                    <div class="countdown-box">
+                        <span class="number" id="days">00</span>
+                        <span class="label">Dias</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span class="number" id="hours">00</span>
+                        <span class="label">Horas</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span class="number" id="minutes">00</span>
+                        <span class="label">Minutos</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span class="number" id="seconds">00</span>
+                        <span class="label">Segundos</span>
+                    </div>
+                </div>
                 <ul>
                     <li><strong>MCIBr: Direitos de uso dos fontes</strong></li>
                     <li><strong>MCIBr: Atualizações inclusas</strong></li>
@@ -352,6 +372,7 @@
         </div>
     </footer>
 
+    <script src="js/countdown.js"></script>
 </body>
 
 </html>

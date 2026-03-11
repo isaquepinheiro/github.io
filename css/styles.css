@@ -267,6 +267,43 @@ th.csharp-col {
 .card.promotional {
     border: 2px dashed var(--accent);
     background-color: #f0f9ff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Countdown Styles */
+#countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: rgba(37, 99, 235, 0.05);
+    border-radius: 0.75rem;
+    border: 1px solid rgba(37, 99, 235, 0.1);
+}
+
+.countdown-box {
+    text-align: center;
+    min-width: 50px;
+}
+
+.countdown-box .number {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.countdown-box .label {
+    display: block;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-top: 4px;
+    letter-spacing: 0.05em;
 }
 
 .card ul li.disabled {
