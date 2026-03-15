@@ -1,0 +1,22 @@
+:root {
+  --theme-color: #0f766e;
+}
+
+.app-name-link {
+  font-weight: 700;
+}
+
+.sidebar-nav strong,
+.sidebar-nav h3,
+.sidebar-nav h4 {
+  font-weight: 700;
+}
+
+.markdown-section a {
+  text-decoration: none;
+}
+
+.markdown-section a:hover {
+  text-decoration: underline;
+}
+

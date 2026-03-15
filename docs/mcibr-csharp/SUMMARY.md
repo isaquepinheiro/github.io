@@ -1,0 +1,20 @@
+# SUMMARY
+
+- [MCIBr-CSharp](README.md)
+  - [Introdução](introduction.md)
+  - [Getting Started](getting-started/quickstart.md)
+  - [Arquitetura](architecture/overview.md)
+    - [Runtime Flow](architecture/runtime-flow.md)
+  - [Módulos](modules/index.md)
+    - [Models](modules/models.md)
+    - [Contexts](modules/contexts.md)
+    - [Impostos](modules/impostos.md)
+    - [RT](modules/rt.md)
+    - [Validations](modules/validations.md)
+    - [UFAliquotas](modules/uf-aliquotas.md)
+    - [Utils](modules/utils.md)
+    - [Enums e Constants](modules/enums-constants.md)
+  - [Referência](reference/api.md)
+  - [Testes](tests/overview.md)
+  - [Troubleshooting](troubleshooting/common-errors.md)
+
