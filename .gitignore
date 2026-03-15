@@ -81,3 +81,9 @@ __recovery/
 
 # Boss dependency manager vendor folder https://github.com/HashLoad/boss
 modules/
+
+# Docs (Docusaurus source)
+docs-src/node_modules/
+docs-src/.docusaurus/
+docs-src/.cache/
+docs-src/build/
