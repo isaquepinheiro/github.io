@@ -67,21 +67,27 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Tecsis Informática',
       logo: {
         alt: 'Tecsis Informática',
         src: 'img/tecsis-logo.svg',
       },
       items: [
-        {href: '/', label: 'Site', position: 'left'},
+        {href: 'https://www.isaquepinheiro.com.br', label: 'Site', position: 'left'},
         {
           type: 'docSidebar',
           sidebarId: 'docsSidebar',
           position: 'left',
           label: 'Portal',
         },
-        {to: '/nidus/', label: 'Nidus', position: 'left'},
-        {to: '/mcibr-csharp/', label: 'MCIBr-CSharp', position: 'left'},
+        {
+          type: 'dropdown',
+          label: 'Projetos',
+          position: 'left',
+          items: [
+            {to: '/nidus/', label: 'Nidus'},
+            {to: '/mcibr-csharp/', label: 'MCIBr-CSharp'},
+          ],
+        },
         {type: 'search', position: 'right'},
         {
           href: 'https://github.com/isaquepinheiro',

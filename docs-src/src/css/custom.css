@@ -33,8 +33,17 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+[data-theme='dark'] .navbar__brand,
+[data-theme='dark'] .navbar__title {
+  color: rgba(248, 250, 252, 0.92);
+}
+
 .navbar__brand {
   font-weight: 700;
+}
+
+.navbar__title {
+  display: none;
 }
 
 .navbar__title {
@@ -103,12 +112,21 @@ main .container {
   margin-bottom: 24px;
 }
 
+[data-theme='dark'] .docs-hero {
+  border-color: rgba(148, 163, 184, 0.25);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.6) 0%, rgba(2, 6, 23, 0.6) 100%);
+}
+
 .docs-eyebrow {
   display: inline-block;
   margin: 0 0 8px;
   color: #1d4ed8;
   font-weight: 600;
   font-size: 0.9rem;
+}
+
+[data-theme='dark'] .docs-eyebrow {
+  color: var(--ifm-color-primary-lightest);
 }
 
 .docs-hero h1 {
@@ -118,6 +136,14 @@ main .container {
 .docs-hero p {
   margin: 0;
   max-width: 780px;
+}
+
+[data-theme='dark'] .docs-hero h1 {
+  color: rgba(248, 250, 252, 0.95);
+}
+
+[data-theme='dark'] .docs-hero p {
+  color: rgba(226, 232, 240, 0.9);
 }
 
 .docs-cards {
@@ -138,6 +164,11 @@ main .container {
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
+[data-theme='dark'] .docs-card {
+  border-color: rgba(148, 163, 184, 0.22);
+  background: rgba(15, 23, 42, 0.55);
+}
+
 .docs-card:hover {
   text-decoration: none;
   transform: translateY(-1px);
@@ -152,6 +183,14 @@ main .container {
 .docs-card p {
   margin: 0 0 10px;
   color: #334155;
+}
+
+[data-theme='dark'] .docs-card h3 {
+  color: rgba(248, 250, 252, 0.95);
+}
+
+[data-theme='dark'] .docs-card p {
+  color: rgba(226, 232, 240, 0.9);
 }
 
 .docs-card span {
