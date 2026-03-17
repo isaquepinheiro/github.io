@@ -3,7 +3,7 @@ displayed_sidebar: nidusSidebar
 title: API (Reference)
 ---
 
-Esta página lista a superfície pública principal do Nidus (por unidade), com foco em uso.
+This page lists the main Nidus public surface (by unit), focused on practical usage.
 
 ## Entrypoint
 
@@ -21,7 +21,7 @@ Esta página lista a superfície pública principal do Nidus (por unidade), com 
   - `function GetInterface<I: IInterface>(ATag: string = ''): I;`
   - `function Request: IRouteRequest;`
 
-## Routes e módulos
+## Routes and modules
 
 - Unit: `Nidus.Module`
   - `function RouteModule(const APath: string; const AModule: TModuleClass): TRouteModule; overload;`
@@ -32,14 +32,14 @@ Esta página lista a superfície pública principal do Nidus (por unidade), com 
 
 - Unit: `Nidus.Route.Abstract`
   - `IRouteMiddleware` (`Before/Call/After`)
-  - `TRouteMiddleware` (implementação default)
+  - `TRouteMiddleware` (default implementation)
 
-## Cache de módulo
+## Module cache
 
 - Unit: `Nidus`
   - `function UseCache(const ACache: IModuleCache): TNidus; overload;`
   - `function UseCache(const ACache: IModuleCache; const AModules: array of TClass): TNidus; overload;`
-- Implementação padrão:
+- Default implementation:
   - Unit: `Nidus.Module.Cache` → `TModuleCacheManager`
 
 ## Pools
@@ -62,6 +62,8 @@ Esta página lista a superfície pública principal do Nidus (por unidade), com 
 - Unit: `Horse.ResponseCache`
   - `function ResponseCache(const ATtlSeconds: Integer; const AMaxEntries: Integer = 5000; const AVaryAuthorization: Boolean = True): THorseCallback; overload;`
   - `function ResponseCache(const ACacheRoutes: array of string; const ATtlSeconds: Integer = 30; const AMaxEntries: Integer = 5000; const AVaryAuthorization: Boolean = True): THorseCallback; overload;`
+
+
 
 
 

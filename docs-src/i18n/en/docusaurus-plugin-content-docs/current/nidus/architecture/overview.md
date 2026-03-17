@@ -1,24 +1,26 @@
 ---
 displayed_sidebar: nidusSidebar
-title: Visão Geral
+title: Overview
 ---
 
 ## Contexto
 
-O Nidus é um framework de arquitetura, não um servidor HTTP. Ele organiza módulos, rotas e DI; o servidor HTTP (ex.: Horse) entrega a requisição e recebe a resposta.
+Nidus is an architectural framework, not an HTTP server. It organizes modules, routes, and DI, while the HTTP server (e.g., Horse) receives the request and sends the response.
 
 ## Componentes principais
 
-- `TNidus`: API principal (bootstrap, cache de módulos, pools).
-- `TModule`: define rotas e binds.
-- Providers: resolvem instâncias e lifecycle (módulos por rota, cache de módulo quando habilitado).
-- Drivers: integração com runtime externo (Horse).
+- `TNidus`: main API (bootstrap, module cache, pools).
+- `TModule`: defines routes and binds.
+- Providers: resolve instances and lifecycle (route-scoped modules, optional module cache).
+- Drivers: integration with external runtime (Horse).
 
 ## Extensibilidade
 
 - Guards/pipes/middlewares por rota
 - Route handlers
-- Pool de objetos pesados para recursos reutilizáveis
+- Pooling for expensive reusable resources
+
+
 
 
 

@@ -3,20 +3,22 @@ displayed_sidebar: nidusSidebar
 title: Introduction
 ---
 
-O Nidus organiza aplicações Delphi por **escopo**, não por camada (MVC). Na prática, cada recurso (ex.: NFe, Auth, Produtos) ganha um módulo, e o runtime do Nidus resolve **dependencies** e **lifecycle** conforme a rota.
+Nidus organizes Delphi applications by **scope**, not by layer (MVC). In practice, each feature (e.g., NFe, Auth, Products) gets its own module, and Nidus runtime resolves **dependencies** and **lifecycle** according to the route.
 
 ## Concepts
 
-- **Módulo (`TModule`)**: unidade de composição. Declara rotas e binds (injeção de dependency).
-- **Rota (`TRouteAbstract`)**: descreve o caminho e o módulo que responde aquele path.
-- **Binds/DI**: registration e resolution de classes/interfaces por tag.
-- **Middlewares / Guards / Pipes**: pontos de extensão para validação, autorização e transformações.
+- **Module (`TModule`)**: composition unit. Declares routes and binds (dependency injection).
+- **Route (`TRouteAbstract`)**: describes the path and the module responsible for that endpoint.
+- **Binds/DI**: class/interface registration and resolution by tag.
+- **Middlewares / Guards / Pipes**: extension points for validation, authorization, and transformations.
 
-## Por que usar
+## Why use it
 
-- Separação por escopo (menos conflito entre times/funcionalidades)
-- Testabilidade (módulos isolados)
-- Escalabilidade de arquitetura (rotas e DI não viram globais)
+- Scope-based separation (less conflict across teams/features)
+- Better testability (isolated modules)
+- Architectural scalability (routes and DI do not become global state)
+
+
 
 
 

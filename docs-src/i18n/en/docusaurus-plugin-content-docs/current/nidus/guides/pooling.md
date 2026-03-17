@@ -3,7 +3,7 @@ displayed_sidebar: nidusSidebar
 title: Pooling (Recursos Pesados)
 ---
 
-Pooling é recomendado para objetos caros de criar (HTTP/RPC, componentes stateful, streams). O Nidus mantém um registry global de pools.
+Pooling is recommended for expensive objects (HTTP/RPC, stateful components, streams). Nidus keeps a global pool registry.
 
 ## Registrar pools
 
@@ -16,7 +16,7 @@ begin
 end.
 ```
 
-## Uso seguro (Acquire/Release automático)
+## Safe usage (automatic Acquire/Release)
 
 ```pascal
 GetNidus.WithPool<TMemoryStream>(
@@ -30,7 +30,7 @@ GetNidus.WithPool<TMemoryStream>(
 
 ## Componentes (ex.: ACBr)
 
-Para `TComponent`, o overload de `UsePools` aceita `Owner` e `Reset`:
+For `TComponent`, the `UsePools` overload accepts `Owner` and `Reset`:
 
 ```pascal
 GetNidus.UsePools<TACBrNFe>(32, nil,
@@ -40,6 +40,8 @@ GetNidus.UsePools<TACBrNFe>(32, nil,
   end
 );
 ```
+
+
 
 
 

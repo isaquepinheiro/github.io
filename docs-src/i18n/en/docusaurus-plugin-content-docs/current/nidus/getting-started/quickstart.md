@@ -3,13 +3,13 @@ displayed_sidebar: nidusSidebar
 title: Quickstart
 ---
 
-Este quickstart mostra o Nidus rodando em um projeto Horse com:
+This quickstart shows Nidus running in a Horse project with:
 
-- um módulo raiz (`TAppModule`) que declara rotas/módulos
-- um módulo de feature (`TPingModule`) que registra binds
+- a root module (`TAppModule`) that declares routes/modules
+- a feature module (`TPingModule`) that registers binds
 - um `TRouteHandlerHorse` que registra endpoints no Horse
 
-## 1) Criar um módulo de feature
+## 1) Create a feature module
 
 ```pascal
 unit App.Module;
@@ -82,7 +82,7 @@ end;
 end.
 ```
 
-## 3) Criar o módulo raiz (rotas + route handlers)
+## 3) Create the root module (routes + route handlers)
 
 ```pascal
 unit App.Module;
@@ -117,7 +117,7 @@ end;
 end.
 ```
 
-## 4) Subir o Horse com o driver do Nidus
+## 4) Start Horse with the Nidus driver
 
 ```pascal
 uses
@@ -131,9 +131,11 @@ begin
 end.
 ```
 
-## Observações
+## Notes
 
-- O `Nidus_Horse` não “processa” a rota: ele **carrega o módulo/DI** antes do handler do Horse rodar.
-- `RouteHandlers` é um lugar prático para centralizar o cadastro de endpoints do servidor (Horse).
+- `Nidus_Horse` does not process the route itself: it **loads module/DI** before the Horse handler runs.
+- `RouteHandlers` is a practical place to centralize server endpoint registration (Horse).
+
+
 
 

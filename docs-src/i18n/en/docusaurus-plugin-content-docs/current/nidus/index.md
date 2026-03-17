@@ -3,9 +3,9 @@ displayed_sidebar: nidusSidebar
 title: Nidus
 ---
 
-Framework modular para Delphi, inspirado em padrões do NestJS: **módulos por rota**, **injeção de dependency**, **guards/pipes/middlewares** e integração com servidores HTTP (ex.: Horse).
+A modular framework for Delphi inspired by NestJS-style patterns: **route-based modules**, **dependency injection**, **guards/pipes/middlewares**, and integration with HTTP servers (e.g., Horse).
 
-![Flow do Nidus](/img/nidus/flow.png)
+![Nidus Flow](/img/nidus/flow.png)
 
 ## Getting Started
 
@@ -13,15 +13,17 @@ Framework modular para Delphi, inspirado em padrões do NestJS: **módulos por r
 - [Installation](getting-started/installation.md)
 - [Quickstart](getting-started/quickstart.md)
 - [Architecture](architecture/overview.md)
-- [Integração com Horse](guides/horse.md)
-- [Cache de resposta (Horse)](guides/response-cache.md)
-- [Pooling (recursos pesados)](guides/pooling.md)
-- [API (referência)](reference/api.md)
+- [Horse Integration](guides/horse.md)
+- [Response Cache (Horse)](guides/response-cache.md)
+- [Pooling (heavy resources)](guides/pooling.md)
+- [API (reference)](reference/api.md)
 - [Troubleshooting](troubleshooting/common-errors.md)
 
 ## Scope
 
-- Covers: organização por módulos/rotas, DI e pipeline de request para aplicações Delphi.
-- Does not cover: implementação de servidor HTTP (isso é do Horse/HTTP.sys/etc.); o Nidus pluga nesses ambientes via driver.
+- Covers: module/route organization, DI, and request pipeline for Delphi applications.
+- Does not cover: HTTP server implementation (Horse/HTTP.sys/etc.); Nidus plugs into those runtimes through a driver.
+
+
 
 

@@ -3,15 +3,17 @@ displayed_sidebar: nidusSidebar
 title: CLI (Scaffold)
 ---
 
-O Nidus não inclui um CLI próprio neste repositório.
+Nidus does not include its own CLI in this repository.
 
-Para scaffold de projetos Delphi e geração de templates (módulo, handlers, etc.), o ecossistema do autor usa o **CLIBr**:
+For Delphi project scaffolding and template generation (module, handlers, etc.), the author ecosystem uses **CLIBr**:
 
-- Repositório: https://github.com/isaquepinheiro/clibr
+- Repository: https://github.com/isaquepinheiro/clibr
 
 :::tip
-Se você padroniza templates para Nidus (módulos/rotas/binds), o CLI ajuda a manter consistência e acelerar onboarding.
+If you standardize Nidus templates (modules/routes/binds), the CLI helps keep consistency and accelerate onboarding.
 :::
+
+
 
 
 

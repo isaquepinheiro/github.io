@@ -1,17 +1,17 @@
 ---
 displayed_sidebar: nidusSidebar
-title: Cache de Módulo
+title: Module Cache
 ---
 
-Por padrão, o Nidus cria e descarta instâncias de módulo durante o ciclo do request. Em alguns cenários (módulos pesados, recursos reutilizáveis), você pode habilitar cache de módulo.
+By default, Nidus creates/disposes module instances during the request lifecycle. In some scenarios (heavy modules, reusable resources), you can enable module cache.
 
-## Implementação padrão
+## Default implementation
 
-O Nidus inclui uma implementação in-memory:
+Nidus includes an in-memory implementation:
 
 - `Nidus.Module.Cache` → `TModuleCacheManager`
 
-## Habilitar para módulos específicos
+## Enable for specific modules
 
 ```pascal
 uses
@@ -24,7 +24,7 @@ begin
 end.
 ```
 
-## Habilitar para todos
+## Enable for all modules
 
 ```pascal
 uses
@@ -38,8 +38,10 @@ end.
 ```
 
 :::caution
-Cache de módulo muda o lifecycle: o módulo passa a sobreviver a múltiplas requests. Só habilite se o módulo for seguro para reuso.
+Module cache changes lifecycle: module instances may survive multiple requests. Enable only when module state is safe for reuse.
 :::
+
+
 
 
 

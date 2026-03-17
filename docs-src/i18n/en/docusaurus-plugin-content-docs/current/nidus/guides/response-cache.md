@@ -1,11 +1,11 @@
 ---
 displayed_sidebar: nidusSidebar
-title: Cache de Resposta (Horse)
+title: Response Cache (Horse)
 ---
 
-O cache de resposta é feito via middleware `Horse.ResponseCache` (server-side). Ele cacheia apenas `GET` e permite limitar por rotas.
+Response caching is done through `Horse.ResponseCache` middleware (server-side). It caches only `GET` and allows route-scoped limits.
 
-## Exemplo: cachear só PDF/XML
+## Example: cache only PDF/XML
 
 ```pascal
 uses
@@ -25,10 +25,12 @@ begin
 end.
 ```
 
-## Chave de cache
+## Cache key
 
 - `method + path + query`
 - opcionalmente varia por `Authorization`
+
+
 
 
 

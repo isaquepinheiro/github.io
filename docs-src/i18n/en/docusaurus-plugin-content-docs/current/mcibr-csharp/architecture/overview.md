@@ -6,70 +6,70 @@ displayed_sidebar: mcibrSidebar
 
 ## Overview
 
-O motor é organizado em camadas/pastas com responsabilidades bem separadas:
+The engine is organized into layers/folders with clear responsibilities:
 
-- `Models/`: orquestração e lifecycle do cálculo (Motor, NotaFiscal, Produto, Emitente, Destinatario)
-- `Contexts/`: DTO de contexto para cálculo (`TaxContext`) que reduz acoplamento entre cálculo e objetos do domínio
-- `Impostos/`: implementações de cálculo por tributo (ICMS/ICMS-ST, IPI, PIS/COFINS, II, ISSQN, IBPT, etc.)
-- `RT/`: componentes ligados à Reforma Tributária (IBS/CBS/ISE + vigência e auxiliares)
-- `Validations/`: acumulação e execução de validações (pipeline)
-- `Regras/`: regras de validação/negócio aplicadas no processamento
-- `UFAliquotas/`: tabela de alíquota interestadual (UF origem → UF destino)
-- `Enums/`, `Constants/`, `Utils/`: apoio (tipos fiscais, constantes e funções numéricas)
+- `Models/`: calculation orchestration and lifecycle (Motor, NotaFiscal, Produto, Emitente, Destinatario)
+- `Contexts/`: calculation context DTO (`TaxContext`) to reduce coupling between calculations and domain objects
+- `Impostos/`: tax calculation implementations (ICMS/ICMS-ST, IPI, PIS/COFINS, II, ISSQN, IBPT, etc.)
+- `RT/`: Tax Reform components (IBS/CBS/ISE + effective date and helpers)
+- `Validations/`: validation accumulation and execution (pipeline)
+- `Regras/`: validation/business rules applied during processing
+- `UFAliquotas/`: interstate rate table (origin UF → destination UF)
+- `Enums/`, `Constants/`, `Utils/`: support utilities (fiscal types, constants, numeric helpers)
 
-## Componentes principais (C4 — Componentes)
+## Main components (C4 — Components)
 
-### ImpostoMotor (orquestrador)
+### ImpostoMotor (orchestrator)
 
-- Responsabilidade: coordenar execução e expor API principal (`IImpostoMotor`)
-- Arquivo: `Models/ImpostoMotor.cs`
+- Responsibility: coordinate execution and expose the main API (`IImpostoMotor`)
+- File: `Models/ImpostoMotor.cs`
 
-Funções relevantes:
+Relevant functions:
 
 - `NotaFiscal` (lazy init)
-- `Processar()` (executa NF e validações)
-- `BuscarUFAliquota(ufOrigem, ufDestino)` (resolve alíquota interestadual via `UFAliquotas/`)
+- `Processar()` (executes invoice and validations)
+- `BuscarUFAliquota(ufOrigem, ufDestino)` (resolves interstate rate via `UFAliquotas/`)
 
-### NotaFiscal (agregador do cálculo)
+### NotaFiscal (calculation aggregator)
 
-- Responsabilidade: agrupar emitente/destinatário/produtos/totais e disparar processamento
-- Arquivo: `Models/NotaFiscal.cs`
+- Responsibility: aggregate issuer/recipient/products/totals and trigger processing
+- File: `Models/NotaFiscal.cs`
 
-Características:
+Characteristics:
 
-- Suporta **produto único** (`Produto`) ou **lista de produtos** (`AddProduto()` + `ProdutoList()`)
-- Armazena totais usados para rateio (frete embutido, seguro, acréscimos, descontos, etc.)
-- Mantém um `ValidationPipes` próprio, executado ao final do `Motor.Processar()`
+- Supports **single product** (`Produto`) or **product list** (`AddProduto()` + `ProdutoList()`)
+- Stores totals used for allocation (embedded freight, insurance, surcharges, discounts, etc.)
+- Keeps its own `ValidationPipes`, executed at the end of `Motor.Processar()`
 
-### Produto (unidade de cálculo)
+### Produto (calculation unit)
 
-- Responsabilidade: rateios, regras e processamento de impostos do item
-- Arquivo: `Models/Produto.cs`
+- Responsibility: allocations, rules, and per-item tax processing
+- File: `Models/Produto.cs`
 
-Características:
+Characteristics:
 
-- Constrói e atualiza um `TaxContext` antes de instanciar/processar impostos do item
-- Seleciona implementação de ICMS conforme o regime tributário do emitente
-- Expõe resultados via `ITaxResults` (parcialmente, para alguns tributos)
+- Builds and updates `TaxContext` before instantiating/processing item taxes
+- Selects ICMS implementation according to issuer tax regime
+- Exposes results through `ITaxResults` (partially, for selected taxes)
 
-### TaxContext (DTO de contexto)
+### TaxContext (context DTO)
 
-- Responsabilidade: transportar dados e callbacks necessários para cálculo sem depender diretamente de `Produto/NotaFiscal`
-- Arquivo: `Contexts/TaxContext.cs`
+- Responsibility: carry calculation data and callbacks without directly depending on `Produto/NotaFiscal`
+- File: `Contexts/TaxContext.cs`
 
-O `TaxContext` inclui:
+`TaxContext` includes:
 
-- parâmetros de arredondamento/truncamento (`CalcParams`)
-- dados do emitente/destinatário
-- dados do item e rateios
-- callback para alíquota interestadual (`OnBuscarAliquotaInterestadual`)
-- acesso ao pipeline de validações (`ValidationPipes`)
+- rounding/truncation parameters (`CalcParams`)
+- issuer/recipient data
+- item and allocation data
+- interstate rate callback (`OnBuscarAliquotaInterestadual`)
+- access to validation pipeline (`ValidationPipes`)
 
-## Padrões observados
+## Observed patterns
 
 - **Lazy initialization**: `Motor.NotaFiscal`, `NotaFiscal.Emitente`, `NotaFiscal.Destinatario`, `NotaFiscal.Produto`
-- **Separação de contexto**: cálculos recebem `TaxContext` para reduzir acoplamento
-- **Rateio proporcional por valor bruto**: diversos campos do item são rateados como `ValorBruto * (TotalRateio / TotalProdutosNF)` (inferido do código)
+- **Context separation**: calculations receive `TaxContext` to reduce coupling
+- **Proportional allocation by gross amount**: several item fields are allocated as `ValorBruto * (TotalRateio / TotalProdutosNF)` (inferred from code)
 
 
 

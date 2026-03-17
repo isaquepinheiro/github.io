@@ -4,76 +4,76 @@ displayed_sidebar: mcibrSidebar
 
 # Runtime Flow
 
-## Flow principal (Motor → NF → Itens → Validações)
+## Main flow (Motor → NF → Items → Validations)
 
 ### 1) `ImpostoMotor.Processar()`
 
-Arquivo: `Models/ImpostoMotor.cs`
+File: `Models/ImpostoMotor.cs`
 
-Comportamento observado:
+Observed behavior:
 
-- Se `NotaFiscal` ainda não foi instanciada, retorna sem processar
-- Caso exista, chama:
+- If `NotaFiscal` has not been instantiated yet, it returns without processing
+- Otherwise, it calls:
   - `NotaFiscal.Processar()`
   - `NotaFiscal.ValidationPipes().Validate()`
 
 ### 2) `NotaFiscal.Processar()`
 
-Arquivo: `Models/NotaFiscal.cs`
+File: `Models/NotaFiscal.cs`
 
-Comportamento observado:
+Observed behavior:
 
-- Executa pré-condições via `DoAssert()`:
-  - `Emitente.RegimeTributario` não pode ser `NotDefined`
-  - `Destinatario.ContribuinteIcms` não pode ser `NotDefined`
-  - `TotalProdutosNF` deve ser `> 0`
-- Se houver itens adicionados via `AddProduto()`, processa todos e executa ajuste de diferenças:
-  - Processa cada item chamando `Produto.Processar()`
-  - Seleciona o item de **maior total** (`AsTotalProduto()`) e chama `ProcessarDiffRateio()` nele
-- Caso contrário, processa o `Produto` único (se existir)
+- Runs preconditions through `DoAssert()`:
+  - `Emitente.RegimeTributario` must not be `NotDefined`
+  - `Destinatario.ContribuinteIcms` must not be `NotDefined`
+  - `TotalProdutosNF` must be `> 0`
+- If there are items added via `AddProduto()`, it processes all and applies difference adjustment:
+  - Processes each item by calling `Produto.Processar()`
+  - Selects the **highest-total** item (`AsTotalProduto()`) and calls `ProcessarDiffRateio()` on it
+- Otherwise, it processes the single `Produto` (if available)
 
 ### 3) `Produto.Processar()`
 
-Arquivo: `Models/Produto.cs`
+File: `Models/Produto.cs`
 
-Comportamento observado:
+Observed behavior:
 
-- Executa pré-condições via `DoAssert()`:
+- Runs preconditions through `DoAssert()`:
   - `PrecoUnitario > 0`
   - `Quantidade > 0`
   - `Cfop > 0`
-- Aplica regra de validação do produto (por CFOP e outras validações):
+- Applies product validation rule (by CFOP and other validations):
   - `new RegraProdutoValidar(this).Validar()`
-- Processa rateios do item (proporcional ao valor bruto do item sobre `TotalProdutosNF`)
-- Processa impostos:
+- Processes item allocations (proportional to item gross value over `TotalProdutosNF`)
+- Processes taxes:
   - `ProcessarImpostos()` (método interno do `Produto`)
 
-## Rateio e ajuste de diferenças
+## Allocation and difference adjustment
 
-### Rateio proporcional
+### Proportional allocation
 
-Padrão de rateio observado (exemplo):
+Observed allocation pattern (example):
 
 - `freteRateio = ValorBrutoItem * (FreteEmbutidoNF / TotalProdutosNF)`
 
-Esse padrão aparece para frete embutido, seguro, despesas acessórias, acréscimo, desconto e outros campos.
+This pattern appears for embedded freight, insurance, ancillary expenses, surcharge, discount, and other fields.
 
-### Ajuste de diferenças (`ProcessarDiffRateio`)
+### Difference adjustment (`ProcessarDiffRateio`)
 
-Quando existem múltiplos itens:
+When multiple items exist:
 
-- A nota fiscal escolhe o item com maior `AsTotalProduto()`
-- Nesse item, executa rotinas de “diff” para ajustar possíveis diferenças decorrentes de arredondamento/truncamento no rateio
+- The invoice selects the item with highest `AsTotalProduto()`
+- On that item, it runs “diff” routines to adjust possible differences caused by rounding/truncation in allocations
 
-> O ajuste de diferença é inferido da estrutura do código (nome e invocação). O comportamento exato do ajuste depende das rotinas internas `ProcessarDiff*` do `Produto`.
+> Difference adjustment is inferred from code structure (name and invocation). Exact behavior depends on internal `ProcessarDiff*` routines in `Produto`.
 
-## Validações
+## Validations
 
-O pipeline de validação (`Validations/ValidationPipes.cs`) funciona assim:
+The validation pipeline (`Validations/ValidationPipes.cs`) works as follows:
 
-- Regras/validators adicionam entradas com `ValidationPipes.Add()`
-- Ao final do `Motor.Processar()`, o pipeline executa todos os validadores e acumula mensagens de falha
-- O consumidor pode ler mensagens via `NotaFiscal.ValidationPipes().ListMessages()`
+- Rules/validators add entries through `ValidationPipes.Add()`
+- At the end of `Motor.Processar()`, the pipeline executes all validators and accumulates failure messages
+- Consumers can read messages through `NotaFiscal.ValidationPipes().ListMessages()`
 
 
 

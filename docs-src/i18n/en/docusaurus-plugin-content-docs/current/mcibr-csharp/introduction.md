@@ -4,36 +4,36 @@ displayed_sidebar: mcibrSidebar
 
 # Introduction
 
-## O que é
+## What it is
 
-O **MCIBr-CSharp** é uma biblioteca .NET (`net8.0`) que implementa um motor de cálculo tributário baseado em:
+**MCIBr-CSharp** is a .NET (`net8.0`) library that implements a tax calculation engine based on:
 
-- Objetos de domínio para **Motor**, **Nota Fiscal**, **Emitente**, **Destinatário** e **Produto** (`Models/`)
-- Implementações de impostos/tributos (`Impostos/`)
-- Componentes ligados à Reforma Tributária (IBS/CBS/ISE e auxiliares) (`RT/`)
-- Pipeline simples de validações acumuladas e executadas ao final (`Validations/`)
+- Domain objects for **Engine**, **Invoice**, **Issuer**, **Recipient**, and **Product** (`Models/`)
+- Tax implementations (`Impostos/`)
+- Tax Reform components (IBS/CBS/ISE and helpers) (`RT/`)
+- A simple validation pipeline accumulated and executed at the end (`Validations/`)
 
-## Como o projeto “roda” (alto nível)
+## How the project runs (high level)
 
-Não existe `Program.cs`. O uso típico é:
+There is no `Program.cs`. Typical usage is:
 
-1. Criar `ImpostoMotor`
-2. Preencher dados em `Motor.NotaFiscal` (emitente, destinatário, totais e produtos)
-3. Chamar `Motor.Processar()`
+1. Create `ImpostoMotor`
+2. Fill data in `Motor.NotaFiscal` (issuer, recipient, totals, and products)
+3. Call `Motor.Processar()`
 
-O método `ImpostoMotor.Processar()` chama `NotaFiscal.Processar()` e, em seguida, executa `NotaFiscal.ValidationPipes().Validate()`.
+`ImpostoMotor.Processar()` calls `NotaFiscal.Processar()` and then executes `NotaFiscal.ValidationPipes().Validate()`.
 
-## O que é processado por produto
+## What is processed per product
 
-Cada `Produto`:
+Each `Produto`:
 
-- Calcula rateios com base nos totais informados na `NotaFiscal` (frete embutido, seguro, despesas, acréscimo, desconto e outros)
-- Processa impostos e resultados associados
-- Acumula validações no `ValidationPipes` da nota fiscal (quando regras/validadores são aplicados)
+- Calculates allocations based on totals provided in `NotaFiscal` (embedded freight, insurance, expenses, surcharge, discount, and others)
+- Processes taxes and related outputs
+- Accumulates validations in invoice `ValidationPipes` (when rules/validators are applied)
 
-## O que não está coberto aqui
+## What is not covered here
 
-Esta documentação descreve estrutura e fluxo **com base no código e testes do repositório**. Quando um comportamento não estiver validado por teste, ele é descrito como “inferido do código”.
+This documentation describes structure and flow **based on repository code and tests**. When behavior is not validated by tests, it is described as “inferred from code”.
 
 
 

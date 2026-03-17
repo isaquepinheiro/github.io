@@ -3,11 +3,11 @@ displayed_sidebar: nidusSidebar
 title: Routes (RouteModule/RouteChild)
 ---
 
-O Nidus organiza o roteamento por módulo. Um módulo raiz declara as rotas (submódulos) que respondem por cada path.
+Nidus organizes routing by module. A root module declares routes (submodules) responsible for each path.
 
-Essas rotas são usadas pelo Nidus para decidir **qual módulo carregar** quando o Horse receber a request.
+Those routes are used by Nidus to decide **which module to load** when Horse receives a request.
 
-## Definindo rotas no módulo raiz
+## Defining routes in the root module
 
 ```pascal
 unit App.Module;
@@ -36,7 +36,7 @@ end;
 end.
 ```
 
-## Rodando no Horse
+## Running with Horse
 
 ```pascal
 uses
@@ -51,12 +51,14 @@ end.
 ```
 
 :::tip
-O `Nidus_Horse` chama internamente `GetNidus.LoadRouteModule(...)` e `GetNidus.DisposeRouteModule(...)`. Você não precisa fazer isso manualmente.
+`Nidus_Horse` internally calls `GetNidus.LoadRouteModule(...)` and `GetNidus.DisposeRouteModule(...)`. You do not need to do this manually.
 :::
 
 :::caution
-O handler HTTP continua sendo do Horse (ex.: `THorse.Get('/nfe/:id', ...)`). Sem um handler registrado, o Horse não chamará sua lógica.
+HTTP handling remains in Horse (e.g., `THorse.Get('/nfe/:id', ...)`). Without a registered handler, Horse will not invoke your logic.
 :::
+
+
 
 
 

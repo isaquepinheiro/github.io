@@ -3,18 +3,18 @@ displayed_sidebar: nidusSidebar
 title: Dependency Injection (Binds)
 ---
 
-O Nidus usa um container de injeção (baseado no InjectorBr) para resolver dependencies dentro do contexto do módulo.
+Nidus uses a DI container (based on InjectorBr) to resolve dependencies within module scope.
 
-## Tipos de bind
+## Bind types
 
-Os binds são declarados no método `Binds` do módulo usando a sintaxe `Bind<T>` (atalho disponível em `Nidus.Module`).
+Binds are declared in a module `Binds` method using `Bind<T>` syntax (shortcut available in `Nidus.Module`).
 
-- `Bind<T>.Singleton`: cria a instância quando o módulo inicia
-- `Bind<T>.SingletonLazy`: cria a instância quando for solicitada pela primeira vez
+- `Bind<T>.Singleton`: creates instance when module starts
+- `Bind<T>.SingletonLazy`: creates the instance on first request
 - `Bind<T>.Factory`: cria sob demanda
-- `Bind<T>.SingletonInterface<I>`: expõe uma interface resolvida via `GetInterface<I>`
+- `Bind<T>.SingletonInterface<I>`: exposes an interface resolved via `GetInterface<I>`
 
-## Exemplo
+## Example
 
 ```pascal
 unit NFe.Module;
@@ -50,8 +50,10 @@ end.
 ```
 
 :::caution
-Para que um bind seja elegível a substituição/override, o tipo precisa estar declarado corretamente no `Bind<T>`.
+For a bind to be eligible for replacement/override, the target type must be declared correctly in `Bind<T>`.
 :::
+
+
 
 
 

@@ -4,11 +4,11 @@ displayed_sidebar: mcibrSidebar
 
 # Reference (API)
 
-Esta página resume a API pública do motor, baseada principalmente no arquivo `Interfaces/MotorInterfaces.cs`.
+This page summarizes the public engine API, mainly based on `Interfaces/MotorInterfaces.cs`.
 
 ## `IImpostoMotor`
 
-Responsabilidade: configuração e orquestração do cálculo.
+Responsibility: calculation configuration and orchestration.
 
 Propriedades/métodos principais:
 
@@ -16,64 +16,64 @@ Propriedades/métodos principais:
 - `CalcParam` (`CalcParams`)
 - `NotaFiscal` (`INotaFiscal`)
 - `ValidationPipes()` (`IValidationPipes`)
-- `BuscarUFAliquota(ufOrigem, ufDestino)` (alíquota interestadual)
+- `BuscarUFAliquota(ufOrigem, ufDestino)` (interstate tax rate)
 - `Processar()`
-- `OnNotifyAlert` + `NotifyAlert(value)` (notificações para o consumidor)
+- `OnNotifyAlert` + `NotifyAlert(value)` (consumer notifications)
 
-Implementação: `Models/ImpostoMotor.cs`.
+Implementation: `Models/ImpostoMotor.cs`.
 
 ## `INotaFiscal`
 
-Responsabilidade: agrupar dados globais do documento e itens, além de concentrar validações.
+Responsibility: aggregate global document/item data and centralize validations.
 
-Pontos principais:
+Key points:
 
-- Acesso a `Emitente`, `Destinatario` e `Produto` (produto único)
-- Suporte a lista de itens: `AddProduto()` + `ProdutoList()`
-- Totais usados no rateio: `TotalProdutosNF`, `FreteEmbutidoNF`, `SeguroNF`, `DespesasAcessoriasNF`, `AcrescimoNF`, `DescontoNF`, etc.
+- Access to `Emitente`, `Destinatario`, and `Produto` (single-product mode)
+- Support for item list: `AddProduto()` + `ProdutoList()`
+- Totals used for allocation: `TotalProdutosNF`, `FreteEmbutidoNF`, `SeguroNF`, `DespesasAcessoriasNF`, `AcrescimoNF`, `DescontoNF`, etc.
 - `ValidationPipes()` + `Processar()`
 
-Implementação: `Models/NotaFiscal.cs`.
+Implementation: `Models/NotaFiscal.cs`.
 
 ## `IProduto`
 
-Responsabilidade: representar o item e expor impostos e resultados.
+Responsibility: represent item data and expose taxes/results.
 
-Campos básicos do item:
+Basic item fields:
 
 - `Item`, `Cfop`, `Quantidade`, `PrecoUnitario`, `TipoVenda`
 - `Acrescimo`, `Desconto`
 
-Rateios e totais do item:
+Item allocations and totals:
 
 - `AsValorBruto()`, `AsValorLiquido()`, `AsTotalProduto()`
 - `AsFreteEmbutidoRateio()`, `AsSeguroRateio()`, `AsDespesasAcessoriasRateio()`, etc.
 
-Impostos expostos (via interfaces):
+Exposed taxes (via interfaces):
 
 - `ICMS`, `IPI`, `PIS`, `COFINS`, `ISSQN`, `II`, `IBPT`
 - `IBS`, `CBS`, `ISE` (RT)
 
-Implementação: `Models/Produto.cs`.
+Implementation: `Models/Produto.cs`.
 
 ## `CalcParams`
 
 Arquivo: `Interfaces/CalcParams.cs`
 
 - `CalcType`: `Round` ou `Truncate`
-- `CalcDecimal`: casas decimais
+- `CalcDecimal`: decimal places
 
-O `CalcParams` é usado em operações de normalização e fechamento de totais (ex.: `NotaFiscal.Total*Rateio()` via `Utils.ResolveValue`).
+`CalcParams` is used in normalization and total-closing operations (e.g., `NotaFiscal.Total*Rateio()` through `Utils.ResolveValue`).
 
 ## `IValidationPipes`
 
-Responsabilidade: acumular validações durante o processamento e avaliá-las posteriormente.
+Responsibility: accumulate validations during processing and evaluate them later.
 
-Arquivo: `Validations/ValidationPipes.cs`.
+File: `Validations/ValidationPipes.cs`.
 
-## Detalhamento completo
+## Full detail
 
-O arquivo `Interfaces/MotorInterfaces.cs` contém diversas interfaces de tributos e subcomponentes (ICMS-ST, DIFAL, FCP, RT, etc.). Esta página documenta o “topo” do consumo.
+`Interfaces/MotorInterfaces.cs` contains multiple tax/subcomponent interfaces (ICMS-ST, DIFAL, FCP, RT, etc.). This page documents the top-level consumer-facing surface.
 
 
 

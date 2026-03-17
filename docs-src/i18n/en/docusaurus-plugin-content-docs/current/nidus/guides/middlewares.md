@@ -3,17 +3,17 @@ displayed_sidebar: nidusSidebar
 title: Middlewares e Guards
 ---
 
-No Nidus, middlewares são definidos por rota via `RouteModule('/path', TModule, [TMiddleware...])`.
+In Nidus, middlewares are defined per route via `RouteModule('/path', TModule, [TMiddleware...])`.
 
 ![Guard/Middleware](/img/nidus/guard.png)
 
-O contrato é `IRouteMiddleware`:
+The contract is `IRouteMiddleware`:
 
-- `Before(ARoute)`: roda antes de resolver o módulo (pode ajustar a rota)
-- `Call(AReq)`: roda durante o request (se retornar `False`, o Nidus lança `EUnauthorizedException`)
-- `After(ARoute)`: roda após o fluxo (hook de finalização)
+- `Before(ARoute)`: runs before module resolution (can adjust route data)
+- `Call(AReq)`: runs during the request (if it returns `False`, Nidus raises `EUnauthorizedException`)
+- `After(ARoute)`: runs after flow completion (finalization hook)
 
-## Exemplo
+## Example
 
 ```pascal
 unit App.Module;
@@ -53,5 +53,7 @@ end;
 
 end.
 ```
+
+
 
 

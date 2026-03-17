@@ -1,16 +1,16 @@
 ---
 displayed_sidebar: nidusSidebar
-title: Integração com Horse
+title: Horse Integration
 ---
 
 ## Driver
 
-O driver do Nidus para Horse é um middleware que você registra no `THorse.Use`.
+Nidus Horse driver is a middleware that you register in `THorse.Use`.
 
 Ele faz duas coisas:
 
-- No startup: chama `GetNidus.Start(TAppModule.Create)` para registrar rotas/binds do módulo raiz.
-- Em cada request: chama `GetNidus.LoadRouteModule(PathInfo, Request)` antes do handler do Horse rodar e, no `finally`, `GetNidus.DisposeRouteModule(PathInfo)`.
+- At startup: call `GetNidus.Start(TAppModule.Create)` to register root module routes/binds.
+- On each request: call `GetNidus.LoadRouteModule(PathInfo, Request)` before Horse handler execution and `GetNidus.DisposeRouteModule(PathInfo)` in `finally`.
 
 ```pascal
 uses
@@ -24,14 +24,16 @@ begin
 end.
 ```
 
-## Ordem de middlewares
+## Middleware ordering
 
-- Autenticação/autorizações (se você tiver) normalmente devem vir antes.
-- `ResponseCache` (se usar) normalmente deve vir antes do `Nidus_Horse`.
+- Authentication/authorization middlewares (if any) should usually run first.
+- `ResponseCache` (if used) usually should run before `Nidus_Horse`.
 
-## Importante: quem atende a rota é o Horse
+## Important: Horse handles the HTTP route
 
-O Nidus não cria endpoints HTTP sozinho. Você registra rotas no Horse (direto via `THorse.Get/Post/...` ou via `TRouteHandlerHorse`). O Nidus entra como camada de **DI/lifecycle por rota**.
+Nidus does not create HTTP endpoints by itself. You register routes in Horse (directly via `THorse.Get/Post/...` or `TRouteHandlerHorse`). Nidus acts as a **route-scoped DI/lifecycle layer**.
+
+
 
 
 

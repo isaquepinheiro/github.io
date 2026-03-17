@@ -3,24 +3,26 @@ displayed_sidebar: nidusSidebar
 title: Installation
 ---
 
-## Pré-requisitos
+## Prerequisites
 
-- Delphi com suporte a **Generics**, **RTTI** e **anonymous methods**.
-- Se você for usar HTTP: um servidor/framework externo (ex.: **Horse**).
+- Delphi with support for **Generics**, **RTTI**, and **anonymous methods**.
+- If you are using HTTP: an external server/framework (e.g., **Horse**).
 
-## Instalar no projeto
+## Install in your project
 
-Este repositório não expõe um instalador/pacote Delphi (DPM/Boss) aqui. A forma suportada por evidência no código é adicionar os sources ao seu projeto.
+This repository does not expose a Delphi installer/package (DPM/Boss) here. The supported path evidenced by the code is adding sources to your project.
 
-1. Adicione `d:\Ecossistema-Delphi\Nidus\Source` ao Search Path do seu projeto.
-2. Garanta que as dependencies externas do seu app estejam instaladas (ex.: Horse, InjectorBr/ModernSyntax, etc.).
+1. Add `d:\Ecossistema-Delphi\Nidus\Source` to your project Search Path.
+2. Ensure your app external dependencies are installed (e.g., Horse, InjectorBr/ModernSyntax, etc.).
 
-## Validar rapidamente
+## Quick validation
 
-- Compile o projeto de exemplo: `d:\Ecossistema-Delphi\Nidus\Examples\Compiler.dproj`.
+- Compile the sample project: `d:\Ecossistema-Delphi\Nidus\Examples\Compiler.dproj`.
 
 :::tip
-O exemplo `Compiler.dproj` referencia units do Nidus por caminho relativo (`..\Source\...`) e é um bom “smoke test” de compilação.
+The `Compiler.dproj` sample references Nidus units through relative paths (`..\Source\...`) and is a good compilation smoke test.
 :::
+
+
 
 

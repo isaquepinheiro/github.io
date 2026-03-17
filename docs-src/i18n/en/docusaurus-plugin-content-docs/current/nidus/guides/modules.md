@@ -3,15 +3,15 @@ displayed_sidebar: nidusSidebar
 title: Modules (TModule)
 ---
 
-Modules são a unidade de composição do Nidus. Um módulo encapsula:
+Modules are Nidus composition units. A module encapsulates:
 
-- `Routes`: rotas/módulos filhos associados ao escopo
-- `Binds`: injeção de dependency (registration de classes/services)
-- `Imports`: importação de binds exportados por outros módulos
-- `ExportedBinds`: binds expostos para outros módulos
-- `RouteHandlers`: interceptação/integração com o driver
+- `Routes`: child routes/modules bound to scope
+- `Binds`: dependency injection (service/class registration)
+- `Imports`: import binds exported by other modules
+- `ExportedBinds`: binds exposed to other modules
+- `RouteHandlers`: interception/integration with driver
 
-## Exemplo: ExportedBinds
+## Example: ExportedBinds
 
 ```pascal
 unit Export.Module;
@@ -41,10 +41,10 @@ end.
 ```
 
 :::caution
-`ExportedBinds` exporta apenas binds. Routes não são exportadas/importadas.
+`ExportedBinds` exports only binds. Routes are not exported/imported.
 :::
 
-## Exemplo: Imports
+## Example: Imports
 
 ```pascal
 unit NFe.Module;
@@ -83,6 +83,8 @@ end;
 
 end.
 ```
+
+
 
 
 

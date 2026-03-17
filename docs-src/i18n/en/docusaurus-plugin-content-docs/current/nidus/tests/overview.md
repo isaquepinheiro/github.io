@@ -3,12 +3,14 @@ displayed_sidebar: nidusSidebar
 title: Tests
 ---
 
-Este projeto é um framework Delphi. A estratégia de testes depende do tipo de aplicação que usa o Nidus.
+This project is a Delphi framework. Testing strategy depends on the application type that uses Nidus.
 
-## Recomendações
+## Recommendations
 
-- Testar módulos isolados (sem server) quando possível.
-- Para integração HTTP, testar via Horse com rotas de exemplo.
+- Test isolated modules (without server) whenever possible.
+- For HTTP integration, test through Horse using sample routes.
+
+
 
 
 

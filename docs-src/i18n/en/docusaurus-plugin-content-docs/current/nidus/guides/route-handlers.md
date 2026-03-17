@@ -3,11 +3,11 @@ displayed_sidebar: nidusSidebar
 title: Route Handlers
 ---
 
-Route Handlers são uma forma de registrar rotas “diretas” no server (ex.: Horse) e centralizar o cadastro em classes.
+Route Handlers are a way to register direct server routes (e.g., Horse) and centralize registration in classes.
 
-No Nidus, o base é `TRouteHandler` e, para Horse, existe `TRouteHandlerHorse`.
+In Nidus, the base class is `TRouteHandler`; for Horse, there is `TRouteHandlerHorse`.
 
-## Exemplo (Horse)
+## Example (Horse)
 
 ```pascal
 unit Pdf.RouteHandler;
@@ -50,6 +50,8 @@ begin
   Result := [TPdfRouteHandler];
 end;
 ```
+
+
 
 
 

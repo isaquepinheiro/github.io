@@ -1,17 +1,19 @@
 ---
 displayed_sidebar: nidusSidebar
-title: Erros Comuns
+title: Common Errors
 ---
 
-## Cache de resposta não funciona
+## Response cache does not work
 
-- Confirme que `ResponseCache(...)` está registrado antes do `Nidus_Horse`.
-- Confirme que a rota está na lista de cache (`ResponseCache([rotas], ...)`) ou que `CacheAll` está habilitado.
+- Ensure `ResponseCache(...)` is registered before `Nidus_Horse`.
+- Ensure the route is in the cache list (`ResponseCache([routes], ...)`) or `CacheAll` is enabled.
 
-## Pool não reutiliza
+## Pool is not reusing
 
-- Confirme que o pool foi registrado com `GetNidus.UsePools<T>`.
-- Confirme que você está usando `GetNidus.WithPool<T>` (ou `Acquire/Release`) no mesmo processo.
+- Ensure the pool was registered with `GetNidus.UsePools<T>`.
+- Ensure you are using `GetNidus.WithPool<T>` (or `Acquire/Release`) within the same process.
+
+
 
 
 
