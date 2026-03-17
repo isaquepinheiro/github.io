@@ -55,7 +55,7 @@ const sidebars: SidebarsConfig = {
         {
           type: 'category',
           label: 'Getting Started',
-          items: ['nidus/getting-started/quickstart'],
+          items: ['nidus/getting-started/installation', 'nidus/getting-started/quickstart'],
         },
         {
           type: 'category',

@@ -10,6 +10,7 @@ Framework modular para Delphi, inspirado em padrões do NestJS: **módulos por r
 ## Onde começar
 
 - [Introdução](introduction.md)
+- [Instalação](getting-started/installation.md)
 - [Quickstart](getting-started/quickstart.md)
 - [Arquitetura](architecture/overview.md)
 - [Integração com Horse](guides/horse.md)
