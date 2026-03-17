@@ -58,7 +58,7 @@ Implementation: `Models/Produto.cs`.
 
 ## `CalcParams`
 
-File: `Interfaces/CalcParams.cs`
+Arquivo: `Interfaces/CalcParams.cs`
 
 - `CalcType`: `Round` ou `Truncate`
 - `CalcDecimal`: decimal places
