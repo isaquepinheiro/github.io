@@ -3,38 +3,6 @@ displayed_sidebar: injectContainerSidebar
 title: Concepts
 ---
 
-## Registro (registry)
-
-O container mantém dois repositórios principais:
-
-- **Classes**: chave = `T.ClassName` (ou um tag, em casos específicos); valor = `TClass`.
-- **Interfaces**: chave = `GUIDToString(TypeInfo(I).Guid)` (ou tag); valor = par (`TClass`, `TGUID`).
-
-## Ciclo de vida
-
-- **Singleton** (`Singleton<T>`): cria e reaproveita uma instância.
-- **Singleton Lazy** (`SingletonLazy<T>`): registra, mas só instancia no primeiro `Get<T>`.
-- **Factory** (`Factory<T>`): instância nova a cada `Get<T>`.
-
-## Auto-inject (construtor)
-
-Quando o service é instanciado e não há parâmetros customizados, o container tenta resolver o construtor `Create(...)` via RTTI:
-
-- Parâmetros `class`: resolve usando `Get<TObject>(NomeDoTipo)`.
-- Parâmetros `interface`: resolve usando `GetInterface<IInterface>(GUID)`.
-
-Na prática, isso exige que você registre previamente as dependencies que aparecem no construtor.
-
-## Eventos (hooks)
-
-No registration, você pode passar callbacks para:
-
-- `OnCreate`: executa após instanciar.
-- `OnDestroy`: executa quando o service é removido.
-- `OnConstructorParams`: fornece parâmetros customizados para o `Create(...)`.
-
----
-
 ## Registry
 
 The container keeps two main registries:

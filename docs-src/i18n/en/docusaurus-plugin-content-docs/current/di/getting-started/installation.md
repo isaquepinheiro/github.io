@@ -3,22 +3,6 @@ displayed_sidebar: injectContainerSidebar
 title: Installation
 ---
 
-## Requisitos
-
-- Delphi com suporte a Generics e RTTI (o projeto se declara compatível com XE+ no README).
-- Aplicações Win32/Win64 (conforme README atual).
-
-## Installation (manual)
-
-1. Adicione `Source/` no Library Path do seu projeto.
-2. Inclua o unit `Inject` no `uses` onde você for registrar/resolver dependencies.
-
-## Installation via Boss
-
-Se você usa Boss (HashLoad), o README sugere um fluxo de instalação. Ajuste o repositório conforme o seu fork/origem.
-
----
-
 ## Requirements
 
 - Delphi with Generics and RTTI support (the README states XE+).

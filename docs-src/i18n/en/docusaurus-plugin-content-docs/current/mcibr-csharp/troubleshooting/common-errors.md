@@ -4,49 +4,49 @@ displayed_sidebar: mcibrSidebar
 
 # Troubleshooting
 
-## Exceções de pré-condição (NotaFiscal)
+## Precondition exceptions (NotaFiscal)
 
-Arquivo: `Models/NotaFiscal.cs`
+File: `Models/NotaFiscal.cs`
 
-`NotaFiscal.Processar()` lança `InvalidOperationException` quando:
+`NotaFiscal.Processar()` throws `InvalidOperationException` when:
 
-- `Emitente.RegimeTributario` é `NotDefined`
-- `Destinatario.ContribuinteIcms` é `NotDefined`
+- `Emitente.RegimeTributario` is `NotDefined`
+- `Destinatario.ContribuinteIcms` is `NotDefined`
 - `TotalProdutosNF <= 0`
 
-Como resolver:
+How to fix:
 
-- Preencha `nf.Emitente.RegimeTributario`
-- Preencha `nf.Destinatario.ContribuinteIcms`
-- Preencha `nf.TotalProdutosNF` com o total de produtos da NF (mesma base usada para rateios)
+- Set `nf.Emitente.RegimeTributario`
+- Set `nf.Destinatario.ContribuinteIcms`
+- Set `nf.TotalProdutosNF` with the invoice total products amount (same base used for allocations)
 
-## Exceções de pré-condição (Produto)
+## Precondition exceptions (Produto)
 
-Arquivo: `Models/Produto.cs`
+File: `Models/Produto.cs`
 
-`Produto.Processar()` lança `InvalidOperationException` quando:
+`Produto.Processar()` throws `InvalidOperationException` when:
 
 - `PrecoUnitario <= 0`
 - `Quantidade <= 0`
 - `Cfop <= 0`
 
-Como resolver:
+How to fix:
 
-- Preencha `item.PrecoUnitario`, `item.Quantidade` e `item.Cfop`
+- Set `item.PrecoUnitario`, `item.Quantidade`, and `item.Cfop`
 
-## Erros de UF/alíquota interestadual
+## UF / interstate rate errors
 
-Arquivos: `Models/ImpostoMotor.cs`, `UFAliquotas/GradeAliquotasBase.cs`
+Files: `Models/ImpostoMotor.cs`, `UFAliquotas/GradeAliquotasBase.cs`
 
-Possíveis falhas:
+Common failures:
 
-- UF de origem/destino em branco em `BuscarUFAliquota(...)`
-- UF destino não encontrada na grade (`KeyNotFoundException`)
+- Origin/destination UF is blank when calling `BuscarUFAliquota(...)`
+- Destination UF not found in the table (`KeyNotFoundException`)
 
-Como resolver:
+How to fix:
 
-- Garanta que `Emitente.UFSigla` e `Destinatario.UFSigla` estejam preenchidos
-- Se você usa arquivo de alíquotas, valide se o conteúdo contém `UF=valor` para a UF destino desejada
+- Ensure `Emitente.UFSigla` and `Destinatario.UFSigla` are set
+- If you use a rate file, ensure it contains `UF=value` for the desired destination UF
 
 
 

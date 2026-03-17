@@ -1,16 +1,15 @@
-# Testes
+# Tests
 
-## Estratégia
+## Strategy
 
-- Unitário
-- Integração
-- Regressão
+- Unit
+- Integration
+- Regression
 
-## Como executar
+## How to run
 
-Documente os comandos do projeto para rodar os testes.
+Document the project commands to run tests.
 
-## Cobertura esperada
+## Expected coverage
 
-Defina metas por módulo.
-
+Define goals per module.

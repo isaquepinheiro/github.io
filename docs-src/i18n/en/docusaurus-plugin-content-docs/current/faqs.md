@@ -5,25 +5,24 @@ sidebar_position: 90
 
 # FAQs
 
-## Esta documentação afeta o site principal?
+## Does this documentation affect the main site?
 
-Não. A documentação é publicada em `/docs/` e o site principal permanece na raiz (`/`).
+No. Documentation is published under `/docs/` and the main site remains at the root (`/`).
 
-## Onde editar os conteúdos?
+## Where should I edit content?
 
-Edite os arquivos em `docs-src/docs/`.
+Edit files under `docs-src/docs/`.
 
-## Como publicar atualizações?
+## How do I publish updates?
 
-Execute o build da documentação:
+Run the documentation build:
 
 ```bash
 npm -C docs-src run build
 ```
 
-Em seguida faça commit e push dos arquivos atualizados em `docs-src/` e `docs/`.
+Then commit and push the updated files under `docs-src/` and `docs/`.
 
-## Posso manter vários projetos no mesmo portal?
+## Can I keep multiple projects in the same portal?
 
-Sim. O recomendado é criar uma pasta por projeto dentro de `docs-src/docs/` e registrar na sidebar.
-
+Yes. The recommended approach is one folder per project under `docs-src/docs/` and registering it in the sidebar.

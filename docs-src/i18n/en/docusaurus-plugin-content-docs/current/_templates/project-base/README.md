@@ -1,11 +1,11 @@
-# Template Base de Projeto
+# Project Base Template
 
-Copie esta estrutura para iniciar a documentação de um novo projeto.
+Copy this structure to start documentation for a new project.
 
-## Estrutura
+## Structure
 
 ```text
-<projeto>/
+<project>/
   index.md
   introduction.md
   getting-started/
@@ -21,11 +21,10 @@ Copie esta estrutura para iniciar a documentação de um novo projeto.
     common-errors.md
 ```
 
-## Passos rápidos
+## Quick steps
 
-1. Copie a pasta `project-base` para `docs-src/docs/<projeto>`
-2. Renomeie títulos e links internos
-3. Atualize o `sidebars.ts` com o novo projeto
-4. Adicione o card na `docs/intro.md`
-5. Rode o build
-
+1. Copy the `project-base` folder to `docs-src/docs/<project>`
+2. Rename titles and internal links
+3. Update `sidebars.ts` with the new project
+4. Add the card to `docs/intro.md`
+5. Run the build

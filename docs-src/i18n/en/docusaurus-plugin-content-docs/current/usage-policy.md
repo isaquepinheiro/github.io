@@ -5,26 +5,26 @@ sidebar_position: 100
 
 # Usage Policy
 
-## Escopo
+## Scope
 
-Este portal descreve arquitetura, uso e referência técnica dos projetos documentados.
+This portal describes architecture, usage, and technical reference for the documented projects.
 
-## Fonte de verdade
+## Source of truth
 
-As informações técnicas devem ser derivadas de:
+Technical information must be derived from:
 
-- código-fonte
-- testes
-- configurações
-- scripts e dependências
+- source code
+- tests
+- configuration
+- scripts and dependencies
 
-## Licenciamento
+## Licensing
 
-Para termos jurídicos, licença e restrições comerciais, consulte os documentos oficiais do projeto e do site.
+For legal terms, licensing, and commercial restrictions, refer to the official project and site documents.
 
-- [Termos de suporte](https://www.isaquepinheiro.com.br/termos/readme-suporte.md)
-- [Termos de licença MCIBr](https://www.isaquepinheiro.com.br/termos/readme-mcibr.md)
+- [Support terms](https://www.isaquepinheiro.com.br/termos/readme-suporte.md)
+- [MCIBr license terms](https://www.isaquepinheiro.com.br/termos/readme-mcibr.md)
 
-## Responsabilidade de uso
+## Usage responsibility
 
-Cada equipe consumidora é responsável por validar o comportamento dos projetos no próprio ambiente antes de uso em produção.
+Each consuming team is responsible for validating project behavior in its own environment before production use.

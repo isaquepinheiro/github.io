@@ -1,19 +1,18 @@
-# API — Referência
+# API — Reference
 
-## Entradas principais
+## Main inputs
 
-| Item | Tipo | Descrição |
+| Item | Type | Description |
 | --- | --- | --- |
-| inputA | string | Descrição |
+| inputA | string | Description |
 
-## Saídas principais
+## Main outputs
 
-| Item | Tipo | Descrição |
+| Item | Type | Description |
 | --- | --- | --- |
-| outputA | string | Descrição |
+| outputA | string | Description |
 
-## Regras e contratos
+## Rules and contracts
 
-- Regra 1
-- Regra 2
-
+- Rule 1
+- Rule 2

@@ -5,32 +5,6 @@ title: Common Errors
 
 ## `EServiceAlreadyRegistered`
 
-**Causa**: tentar registrar a mesma classe/interface duas vezes.
-
-**Correção**: registre uma única vez no bootstrap, ou remova antes de registrar novamente.
-
-## `EServiceNotFound` (interfaces)
-
-**Causa**: chamar `GetInterface<I>` sem ter registrado `SingletonInterface<I, T>`.
-
-**Correção**: garanta que o GUID/Tag usado no registration é o mesmo usado no `GetInterface`.
-
-## `Get<T>` retorna `nil`
-
-**Causa**: a classe não está registrada.
-
-**Correção**: verifique se você chamou `Singleton<T>`, `SingletonLazy<T>`, `Factory<T>` ou `AddInstance<T>` antes de resolver.
-
-## Exceção ao auto-injetar `Create(...)`
-
-**Causa**: dependency do construtor não registrada, ou tipo não suportado (ex.: tipos primitivos).
-
-**Correção**: registre dependencies do construtor e mantenha parâmetros de `Create(...)` limitados a `class` e `interface` (ou forneça `OnConstructorParams`).
-
----
-
-## `EServiceAlreadyRegistered`
-
 **Cause**: registering the same class/interface twice.
 
 **Fix**: register once during bootstrap, or remove before re-registering.

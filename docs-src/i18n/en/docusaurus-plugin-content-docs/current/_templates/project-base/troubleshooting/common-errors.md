@@ -1,14 +1,13 @@
-# Troubleshooting — Erros comuns
+# Troubleshooting — Common errors
 
-## Erro 1
+## Error 1
 
-- Sintoma:
-- Causa provável:
-- Ação:
+- Symptom:
+- Likely cause:
+- Action:
 
-## Erro 2
+## Error 2
 
-- Sintoma:
-- Causa provável:
-- Ação:
-
+- Symptom:
+- Likely cause:
+- Action:

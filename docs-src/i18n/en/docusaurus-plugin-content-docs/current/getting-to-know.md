@@ -5,19 +5,18 @@ sidebar_position: 2
 
 # Getting to Know
 
-Esta documentação foi organizada para acelerar entendimento e adoção dos projetos mantidos pela **Tecsis Informática**.
+This documentation is organized to speed up understanding and adoption of projects maintained by **Tecsis Informática**.
 
-## Como está organizada
+## How it is organized
 
-- **Introdução**: visão geral e acesso rápido aos projetos
-- **MCIBr-CSharp**: conteúdo técnico completo do motor
-- **FAQ**: respostas para dúvidas recorrentes
-- **Uso e Licenciamento**: diretrizes de uso dos conteúdos e projetos
+- **Home**: overview and quick access to projects
+- **Projects**: technical documentation per project
+- **FAQ**: answers to recurring questions
+- **Usage & licensing**: guidance on using the content and projects
 
-## Fluxo recomendado
+## Recommended flow
 
-1. Abra a página do projeto
-2. Leia `Introdução` e `Quickstart`
-3. Avance para `Arquitetura` e `Referência`
-4. Use `Testes` e `Troubleshooting` em cenários operacionais
-
+1. Open the project page
+2. Read `Introduction` and `Quickstart`
+3. Move on to `Architecture` and `Reference`
+4. Use `Tests` and `Troubleshooting` for operational scenarios

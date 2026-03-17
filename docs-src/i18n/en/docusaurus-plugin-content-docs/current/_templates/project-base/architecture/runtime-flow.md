@@ -1,15 +1,14 @@
-# Arquitetura — Runtime Flow
+# Architecture — Runtime Flow
 
-## Sequência principal
+## Main sequence
 
-1. Entrada
-2. Validação
-3. Processamento
-4. Saída
+1. Input
+2. Validation
+3. Processing
+4. Output
 
-## Pontos de erro
+## Failure points
 
-- Falha de validação
-- Falha de integração
-- Falha de regra
-
+- Validation failure
+- Integration failure
+- Rule failure

@@ -5,16 +5,15 @@ sidebar_position: 110
 
 # Roadmap
 
-## Próximas melhorias
+## Next improvements
 
-- Ampliar o portal para múltiplos projetos além do MCIBr-CSharp
-- Adicionar mais guias operacionais orientados por cenário
-- Publicar seção de arquitetura com diagramas por módulo
-- Evoluir catálogo de troubleshooting com casos reais
+- Expand the portal to multiple projects beyond MCIBr-CSharp
+- Add more scenario-oriented operational guides
+- Publish architecture sections with module-level diagrams
+- Expand troubleshooting catalog with real-world cases
 
-## Padrão de evolução
+## Evolution principles
 
-- Atualizações derivadas de código, testes e configuração
-- Conteúdo incremental sem quebrar links existentes
-- Priorização por valor de onboarding e manutenção
-
+- Updates derived from code, tests, and configuration
+- Incremental content without breaking existing links
+- Prioritization based on onboarding and maintenance value

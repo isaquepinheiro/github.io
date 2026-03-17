@@ -2,17 +2,16 @@
 title: <NOME_DO_PROJETO>
 ---
 
-Resumo do projeto em uma frase curta, com objetivo e contexto técnico.
+One-line project summary with goal and technical context.
 
-## Onde começar
+## Where to start
 
-- [Introdução](introduction.md)
+- [Introduction](introduction.md)
 - [Quickstart](getting-started/quickstart.md)
-- [Arquitetura](architecture/overview.md)
+- [Architecture](architecture/overview.md)
 - [API](reference/api.md)
-- [Testes](tests/overview.md)
+- [Tests](tests/overview.md)
 
-## Escopo
+## Scope
 
-Descreva o que o projeto cobre e o que não cobre.
-
+Describe what the project covers and what it does not cover.

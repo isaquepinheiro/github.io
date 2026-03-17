@@ -3,21 +3,6 @@ displayed_sidebar: injectContainerSidebar
 title: Overview
 ---
 
-## Componentes principais
-
-- [`TInject`](file:///d:/Ecossistema-Delphi/InjectContainer/Source/Inject.pas): API pública (register/get/remove, logging, cache, detecção de ciclos).
-- [`TInjectContainer`](file:///d:/Ecossistema-Delphi/InjectContainer/Source/Inject.Container.pas): base com dicionários e fábrica.
-- [`TInjectFactory`](file:///d:/Ecossistema-Delphi/InjectContainer/Source/Inject.Factory.pas): cria metadados (`TServiceData`).
-- [`TServiceData`](file:///d:/Ecossistema-Delphi/InjectContainer/Source/Inject.Service.pas): armazena classe, modo (singleton/factory) e cria instâncias via RTTI.
-- [`TInjectEvents`](file:///d:/Ecossistema-Delphi/InjectContainer/Source/Inject.Events.pas): callbacks de lifecycle e parâmetros.
-
-## Regras práticas
-
-- Registre seus services durante o bootstrap (antes de múltiplas threads começarem a resolver).
-- Para auto-inject, mantenha construtores simples e dependencies previamente registradas.
-
----
-
 ## Main building blocks
 
 - [`TInject`](file:///d:/Ecossistema-Delphi/InjectContainer/Source/Inject.pas): public API (register/get/remove, logging, cache, cycle detection).

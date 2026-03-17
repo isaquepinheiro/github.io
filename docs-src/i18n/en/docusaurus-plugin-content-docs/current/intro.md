@@ -6,50 +6,55 @@ slug: /
 
 <div class="docs-hero">
   <p class="docs-eyebrow">Tecsis Informática</p>
-  <h1>Documentação Técnica</h1>
+  <h1>Technical Documentation</h1>
   <p>
-    Base de documentação dos produtos, com foco em onboarding rápido, referência
-    técnica e manutenção contínua.
+    Product documentation hub focused on quick onboarding, technical reference,
+    and continuous maintenance.
   </p>
 </div>
 
-## Projetos disponíveis
+## Available projects
 
 <div class="docs-cards">
-  <a class="docs-card" href="/docs/nidus/">
+  <a class="docs-card" href="/docs/en/nidus/">
     <h3>Nidus</h3>
-    <p>Framework modular para Delphi: módulos por rota, DI, guards/pipes/middlewares e integração com Horse.</p>
-    <span>Abrir documentação →</span>
+    <p>Modular Delphi framework: route-based modules, DI, guards/pipes/middlewares, and Horse integration.</p>
+    <span>Open docs →</span>
   </a>
-  <a class="docs-card" href="/docs/mcibr-csharp/">
+  <a class="docs-card" href="/docs/en/mcibr-csharp/">
     <h3>MCIBr-CSharp</h3>
-    <p>Motor de cálculo tributário em .NET, com documentação de arquitetura, fluxo, referência e troubleshooting.</p>
-    <span>Abrir documentação →</span>
+    <p>.NET tax calculation engine, with architecture, flow, reference, and troubleshooting docs.</p>
+    <span>Open docs →</span>
   </a>
-  <a class="docs-card docs-card-muted" href="/docs/roadmap/">
-    <h3>Roadmap do Portal</h3>
-    <p>Planejamento das próximas evoluções da documentação e da estrutura de navegação.</p>
-    <span>Ver roadmap →</span>
+  <a class="docs-card" href="/docs/en/di/">
+    <h3>InjectContainer</h3>
+    <p>Lightweight Delphi DI container: registration, lifetimes, and constructor auto-injection.</p>
+    <span>Open docs →</span>
+  </a>
+  <a class="docs-card docs-card-muted" href="/docs/en/roadmap/">
+    <h3>Portal roadmap</h3>
+    <p>Planned improvements for docs and navigation structure.</p>
+    <span>View roadmap →</span>
   </a>
 </div>
 
 ## Getting to know
 
-- [Visão da estrutura do portal](getting-to-know.md)
+- [Portal structure overview](getting-to-know.md)
 - [FAQs](faqs.md)
-- [Guia para novo projeto](guides/new-project-docs.md)
+- [Guide for documenting a new project](guides/new-project-docs.md)
 - [Usage Policy](usage-policy.md)
 - [Roadmap](roadmap.md)
 
-## Padrão editorial
+## Editorial standard
 
-- Conteúdo derivado de código-fonte, testes e configuração
-- Sem inventar funcionalidades não documentadas
-- Incertezas descritas explicitamente quando necessário
+- Content derived from source code, tests, and configuration
+- No undocumented features invented
+- Uncertainties explicitly stated when needed
 
-## Navegação recomendada
+## Recommended navigation
 
-1. Entre no projeto desejado
-2. Comece por Introdução e Getting Started
-3. Avance para Arquitetura e Referência
-4. Use Testes e Troubleshooting como apoio operacional
+1. Pick a project
+2. Start with Introduction and Getting Started
+3. Move on to Architecture and Reference
+4. Use Tests and Troubleshooting as operational support

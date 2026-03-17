@@ -28,7 +28,7 @@ end.
 ## Cache key
 
 - `method + path + query`
-- opcionalmente varia por `Authorization`
+- optionally vary by `Authorization`
 
 
 

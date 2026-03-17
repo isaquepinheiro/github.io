@@ -7,7 +7,7 @@ This quickstart shows Nidus running in a Horse project with:
 
 - a root module (`TAppModule`) that declares routes/modules
 - a feature module (`TPingModule`) that registers binds
-- um `TRouteHandlerHorse` que registra endpoints no Horse
+- a `TRouteHandlerHorse` that registers endpoints in Horse
 
 ## 1) Create a feature module
 
@@ -46,7 +46,7 @@ end;
 end.
 ```
 
-## 2) Criar o RouteHandler (Horse)
+## 2) Create the RouteHandler (Horse)
 
 ```pascal
 unit Ping.RouteHandler;

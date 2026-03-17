@@ -6,42 +6,42 @@ displayed_sidebar: mcibrSidebar
 
 ## Stack
 
-O projeto de testes (`Tests/MCIBr.Tests/`) usa:
+The test project (`Tests/MCIBr.Tests/`) uses:
 
 - xUnit
 - Microsoft.NET.Test.Sdk
 - coverlet.collector
 
-Definições em `Tests/MCIBr.Tests/MCIBr.Tests.csproj`.
+See `Tests/MCIBr.Tests/MCIBr.Tests.csproj`.
 
-## O que os testes garantem (exemplos concretos)
+## What tests guarantee (concrete examples)
 
-### Arredondamento/truncamento e helpers
+### Rounding/truncation and helpers
 
-Arquivo: `Tests/MCIBr.Tests/UtilsTests.cs`
+File: `Tests/MCIBr.Tests/UtilsTests.cs`
 
-- Garante `ResolveValue(..., CalcType.Round, decimals)` para casos com `decimals` positivo, zero e negativo
-- Garante `ResolveValue(..., CalcType.Truncate, decimals)` para `decimals` de `0..4`
-- Garante `IfThen.Condition(condition, whenTrue, whenFalse)`
+- Ensures `ResolveValue(..., CalcType.Round, decimals)` works for positive, zero, and negative `decimals`
+- Ensures `ResolveValue(..., CalcType.Truncate, decimals)` works for `decimals` in `0..4`
+- Ensures `IfThen.Condition(condition, whenTrue, whenFalse)`
 
-### Vigência RT (datas e override)
+### RT effective dates (dates and override)
 
-Arquivo: `Tests/MCIBr.Tests/VigenciaTests.cs`
+File: `Tests/MCIBr.Tests/VigenciaTests.cs`
 
-- Garante o comportamento em torno da data de início da CBS/IS (2027-01-01)
-- Garante que o override de data altera o resultado das funções de vigência
-- Garante transição de cálculo ICMS/PIS/COFINS versus IBS a partir de 2033-01-01
+- Ensures behavior around CBS/IS start date (2027-01-01)
+- Ensures overriding the date changes the effective-date results
+- Ensures transition from ICMS/PIS/COFINS to IBS starting at 2033-01-01
 
-## Cobertura de tributos (por arquivo)
+## Tax coverage (by file)
 
-Além dos exemplos acima, há diversos testes focados em cenários de ICMS/ICMS-ST/DIFAL/FCP, organizados por CST/CSOSN, por exemplo:
+Beyond the examples above, there are multiple tests focused on ICMS/ICMS-ST/DIFAL/FCP scenarios, organized by CST/CSOSN, for example:
 
 - `Csosn101IcmsTests.cs`
 - `Csosn201IcmsStTests.cs`
 - `Cst00IcmsTests.cs`
 - `Cst10IcmsStTests.cs`
 
-> A interpretação de “comportamento esperado” deve ser sempre derivada do que os testes afirmam (Arrange/Act/Assert) em cada arquivo.
+> Interpret “expected behavior” strictly from what tests assert (Arrange/Act/Assert) in each file.
 
 
 

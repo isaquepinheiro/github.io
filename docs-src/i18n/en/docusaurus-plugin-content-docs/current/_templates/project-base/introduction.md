@@ -1,16 +1,15 @@
-# Introdução
+# Introduction
 
-## Objetivo
+## Goal
 
-Explique o problema que o projeto resolve.
+Explain the problem the project solves.
 
-## Público-alvo
+## Target audience
 
-Defina quem usa esta documentação.
+Define who uses this documentation.
 
-## Conceitos principais
+## Core concepts
 
-- Conceito A
-- Conceito B
-- Conceito C
-
+- Concept A
+- Concept B
+- Concept C

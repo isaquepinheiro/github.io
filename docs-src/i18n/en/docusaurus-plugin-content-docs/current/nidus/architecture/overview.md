@@ -16,7 +16,7 @@ Nidus is an architectural framework, not an HTTP server. It organizes modules, r
 
 ## Extensibilidade
 
-- Guards/pipes/middlewares por rota
+- Route-scoped guards/pipes/middlewares
 - Route handlers
 - Pooling for expensive reusable resources
 

@@ -11,7 +11,7 @@ Binds are declared in a module `Binds` method using `Bind<T>` syntax (shortcut a
 
 - `Bind<T>.Singleton`: creates instance when module starts
 - `Bind<T>.SingletonLazy`: creates the instance on first request
-- `Bind<T>.Factory`: cria sob demanda
+- `Bind<T>.Factory`: creates on demand
 - `Bind<T>.SingletonInterface<I>`: exposes an interface resolved via `GetInterface<I>`
 
 ## Example

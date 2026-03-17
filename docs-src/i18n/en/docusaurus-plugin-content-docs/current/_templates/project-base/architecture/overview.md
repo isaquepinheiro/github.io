@@ -1,16 +1,15 @@
-# Arquitetura — Visão geral
+# Architecture — Overview
 
-## Contexto
+## Context
 
-Descreva os limites do sistema e integrações.
+Describe system boundaries and integrations.
 
-## Blocos principais
+## Main building blocks
 
-- Bloco 1
-- Bloco 2
-- Bloco 3
+- Block 1
+- Block 2
+- Block 3
 
-## Fluxo de alto nível
+## High-level flow
 
-Resuma entrada, processamento e saída.
-
+Summarize input, processing, and output.

@@ -1,19 +1,18 @@
 # Quickstart
 
-## Pré-requisitos
+## Prerequisites
 
 - Runtime
 - Dependências
 - Ambiente
 
-## Exemplo mínimo
+## Minimal example
 
 ```txt
-Descreva o primeiro uso funcional do projeto.
+Describe the first functional use of the project.
 ```
 
-## Próximos passos
+## Next steps
 
-- Ir para arquitetura
-- Ir para referência
-
+- Go to architecture
+- Go to reference

@@ -1,20 +1,20 @@
 ---
-title: Novo Projeto na Documentação
+title: Add a New Project
 sidebar_position: 50
 ---
 
-# Novo Projeto na Documentação
+# Add a New Project
 
-## Objetivo
+## Goal
 
-Adicionar um novo projeto no portal mantendo o mesmo padrão visual, estrutural e de navegação.
+Add a new project to the portal while keeping the same visual, structural, and navigation standards.
 
-## Estrutura recomendada
+## Recommended structure
 
-Use o template pronto em `docs-src/docs/_templates/project-base/` e copie para `docs-src/docs/<projeto>/`:
+Use the ready template in `docs-src/docs/_templates/project-base/` and copy it to `docs-src/docs/<project>/`:
 
 ```text
-docs-src/docs/<projeto>/
+docs-src/docs/<project>/
   index.md
   introduction.md
   getting-started/
@@ -24,26 +24,26 @@ docs-src/docs/<projeto>/
   troubleshooting/
 ```
 
-## Passos
+## Steps
 
-1. Copie `docs-src/docs/_templates/project-base/` para `docs-src/docs/<projeto>/`
-2. Adicione o bloco do projeto na home em `docs-src/docs/intro.md`
-3. Registre o projeto na sidebar em `docs-src/sidebars.ts`
-4. Mantenha os mesmos padrões de título e seções
-5. Rode build e valide links
+1. Copy `docs-src/docs/_templates/project-base/` to `docs-src/docs/<project>/`
+2. Add the project card to the home page in `docs-src/docs/intro.md`
+3. Register the project in the sidebar in `docs-src/sidebars.ts`
+4. Keep the same title/section conventions
+5. Run a build and validate links
 
-## Recursos reutilizáveis já prontos
+## Reusable resources already available
 
-- Header dinâmico em `docs-src/static/js/navbar-dynamic.js`
-- Branding desktop em `docs-src/static/img/tecsis-logo.svg`
-- Branding mobile em `docs-src/static/img/tecsis-logo-mobile.svg`
-- Favicon em `docs-src/static/img/tecsis-favicon.svg`
-- Estilos globais em `docs-src/src/css/custom.css`
+- Dynamic header in `docs-src/static/js/navbar-dynamic.js`
+- Desktop branding in `docs-src/static/img/tecsis-logo.svg`
+- Mobile branding in `docs-src/static/img/tecsis-logo-mobile.svg`
+- Favicon in `docs-src/static/img/tecsis-favicon.svg`
+- Global styles in `docs-src/src/css/custom.css`
 
-## Publicação
+## Publishing
 
 ```bash
 npm -C docs-src run build
 ```
 
-Depois faça commit/push de `docs-src/` e `docs/`.
+Then commit/push changes in `docs-src/` and `docs/`.
