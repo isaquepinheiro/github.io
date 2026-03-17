@@ -14,5 +14,3 @@ Delphi tests live under [`Test Delphi/`](file:///d:/Ecossistema-Delphi/InjectCon
 - Factory
 - Interface singleton (with and without tag)
 - Constructor auto-injection
-
-

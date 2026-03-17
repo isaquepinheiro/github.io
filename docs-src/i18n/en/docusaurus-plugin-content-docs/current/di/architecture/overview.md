@@ -15,5 +15,3 @@ title: Overview
 
 - Register services during bootstrap (before multiple threads start resolving).
 - For auto-inject, keep constructors simple and dependencies registered upfront.
-
-

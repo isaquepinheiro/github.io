@@ -5,7 +5,7 @@ title: Quickstart
 
 ## 1) Create a container
 
-You can use a local container or the global singleton via `GetInjector`.
+You can use a local container, or the global singleton via `GetInjector`.
 
 ```pascal
 uses
@@ -57,5 +57,3 @@ Injector.SingletonInterface<IMyService, TMyService>;
 var Svc := Injector.GetInterface<IMyService>;
 Svc.Execute;
 ```
-
-

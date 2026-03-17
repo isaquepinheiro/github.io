@@ -12,5 +12,3 @@ Recommended pattern:
 1. Register constructor dependencies first.
 2. Register the class that depends on them.
 3. Resolve the dependent class using `Get<T>`.
-
-

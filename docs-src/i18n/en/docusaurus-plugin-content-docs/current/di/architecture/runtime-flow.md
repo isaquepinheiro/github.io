@@ -22,5 +22,3 @@ Note: `Get<T>` returns `nil` when missing (no exception).
 4. If no instance exists, create `TServiceData` for interface.
 5. If needed, auto-resolve `Create(...)` params.
 6. Return `I` or throw `EServiceNotFound` when missing.
-
-

@@ -5,11 +5,7 @@ title: InjectContainer
 
 A lightweight dependency injection (DI) container for Delphi, supporting **singleton**, **factory**, **lazy singleton**, **interface registration**, and **constructor parameter auto-resolution** via RTTI.
 
----
-
-A lightweight dependency injection (DI) container for Delphi, supporting **singleton**, **factory**, **lazy singleton**, **interface registration**, and **constructor parameter auto-resolution** via RTTI.
-
-## Getting Started
+## Getting started
 
 - [Introduction](introduction.md)
 - [Installation](getting-started/installation.md)
@@ -27,10 +23,3 @@ A lightweight dependency injection (DI) container for Delphi, supporting **singl
 
 - Covers: class/interface registration and resolution, lifetimes (singleton/factory), create/destroy hooks, and automatic constructor injection in `Create`.
 - Does not cover: unit scanning, attributes/annotations, IDE integration, or advanced module management.
-
----
-
-- Covers: class/interface registration & resolution, lifetimes (singleton/factory), create/destroy hooks, and `Create` auto-injection.
-- Does not cover: unit scanning, attributes/annotations, IDE integration, or advanced module management.
-
-

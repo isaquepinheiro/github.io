@@ -7,7 +7,7 @@ title: Introduction
 
 **InjectContainer** (code under `Source/`) exposes [`TInject`](file:///d:/Ecossistema-Delphi/InjectContainer/Source/Inject.pas) as the main API.
 
-It keeps a registry of services and resolves instances via RTTI, supporting:
+It keeps a service registry and resolves instances via RTTI, supporting:
 
 - **Singleton**: one instance per service.
 - **Factory**: a new instance on each resolution.
@@ -18,5 +18,3 @@ It keeps a registry of services and resolves instances via RTTI, supporting:
 ### Naming in this repository
 
 You may see legacy **Injector4D** references in code/README. The current API lives in the `Inject` unit and the core type is `TInject`.
-
-

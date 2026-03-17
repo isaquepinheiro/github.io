@@ -12,5 +12,3 @@ The repository ships Delphi examples under [`Exemples/Delphi/`](file:///d:/Ecoss
 - `DependencyInjection_Interface`
 
 They demonstrate class/interface/lazy registration and resolution in Delphi apps.
-
-

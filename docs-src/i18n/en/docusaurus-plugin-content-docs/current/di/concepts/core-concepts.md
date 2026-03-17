@@ -32,5 +32,3 @@ On registration, you can provide callbacks for:
 - `OnCreate`: runs after instantiation.
 - `OnDestroy`: runs when removed.
 - `OnConstructorParams`: supplies custom `Create(...)` params.
-
-

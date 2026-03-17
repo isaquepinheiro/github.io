@@ -4,7 +4,7 @@
     "description": "The label for version current"
   },
   "sidebar.docsSidebar.category.Projetos": {
-    "message": "Projetos",
+    "message": "Projects",
     "description": "The label for category 'Projetos' in sidebar 'docsSidebar'"
   },
   "sidebar.docsSidebar.category.Frequently Asked Questions": {
@@ -44,19 +44,19 @@
     "description": "The label for category 'Getting Started' in sidebar 'nidusSidebar'"
   },
   "sidebar.nidusSidebar.category.Arquitetura": {
-    "message": "Arquitetura",
+    "message": "Architecture",
     "description": "The label for category 'Arquitetura' in sidebar 'nidusSidebar'"
   },
   "sidebar.nidusSidebar.category.Guias": {
-    "message": "Guias",
+    "message": "Guides",
     "description": "The label for category 'Guias' in sidebar 'nidusSidebar'"
   },
   "sidebar.nidusSidebar.category.Referência": {
-    "message": "Referência",
+    "message": "Reference",
     "description": "The label for category 'Referência' in sidebar 'nidusSidebar'"
   },
   "sidebar.nidusSidebar.category.Testes e Suporte": {
-    "message": "Testes e Suporte",
+    "message": "Tests & Support",
     "description": "The label for category 'Testes e Suporte' in sidebar 'nidusSidebar'"
   },
   "sidebar.mcibrSidebar.category.MCIBr-CSharp": {
@@ -68,15 +68,15 @@
     "description": "The label for category 'Getting Started' in sidebar 'mcibrSidebar'"
   },
   "sidebar.mcibrSidebar.category.Arquitetura": {
-    "message": "Arquitetura",
+    "message": "Architecture",
     "description": "The label for category 'Arquitetura' in sidebar 'mcibrSidebar'"
   },
   "sidebar.mcibrSidebar.category.Referência": {
-    "message": "Referência",
+    "message": "Reference",
     "description": "The label for category 'Referência' in sidebar 'mcibrSidebar'"
   },
   "sidebar.mcibrSidebar.category.Testes e Suporte": {
-    "message": "Testes e Suporte",
+    "message": "Tests & Support",
     "description": "The label for category 'Testes e Suporte' in sidebar 'mcibrSidebar'"
   },
   "sidebar.injectContainerSidebar.category.InjectContainer": {
@@ -88,27 +88,27 @@
     "description": "The label for category 'Getting Started' in sidebar 'injectContainerSidebar'"
   },
   "sidebar.injectContainerSidebar.category.Conceitos": {
-    "message": "Conceitos",
+    "message": "Concepts",
     "description": "The label for category 'Conceitos' in sidebar 'injectContainerSidebar'"
   },
   "sidebar.injectContainerSidebar.category.Arquitetura": {
-    "message": "Arquitetura",
+    "message": "Architecture",
     "description": "The label for category 'Arquitetura' in sidebar 'injectContainerSidebar'"
   },
   "sidebar.injectContainerSidebar.category.Tutoriais": {
-    "message": "Tutoriais",
+    "message": "Tutorials",
     "description": "The label for category 'Tutoriais' in sidebar 'injectContainerSidebar'"
   },
   "sidebar.injectContainerSidebar.category.Referência": {
-    "message": "Referência",
+    "message": "Reference",
     "description": "The label for category 'Referência' in sidebar 'injectContainerSidebar'"
   },
   "sidebar.injectContainerSidebar.category.Exemplos": {
-    "message": "Exemplos",
+    "message": "Examples",
     "description": "The label for category 'Exemplos' in sidebar 'injectContainerSidebar'"
   },
   "sidebar.injectContainerSidebar.category.Testes e Suporte": {
-    "message": "Testes e Suporte",
+    "message": "Tests & Support",
     "description": "The label for category 'Testes e Suporte' in sidebar 'injectContainerSidebar'"
   }
 }

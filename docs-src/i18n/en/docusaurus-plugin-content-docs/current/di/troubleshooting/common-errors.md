@@ -26,5 +26,3 @@ title: Common Errors
 **Cause**: missing registrations for constructor dependencies, or unsupported param types (e.g., primitives).
 
 **Fix**: register constructor dependencies and keep `Create(...)` params to `class`/`interface` (or provide `OnConstructorParams`).
-
-
