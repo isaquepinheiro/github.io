@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
@@ -20,7 +20,7 @@ const config: Config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/docs/',
   trailingSlash: true,
-  scripts: [{src: '/docs/js/navbar-dynamic.js', defer: true}],
+  scripts: [{ src: '/docs/js/navbar-dynamic.js', defer: true }],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -34,7 +34,7 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'pt-BR',
-    locales: ['pt-BR'],
+    locales: ['pt-BR', 'en'],
   },
 
   presets: [
@@ -72,7 +72,7 @@ const config: Config = {
         src: 'img/tecsis-logo.svg',
       },
       items: [
-        {href: 'https://www.isaquepinheiro.com.br', label: 'Site', position: 'left'},
+        { href: 'https://www.isaquepinheiro.com.br', label: 'Site', position: 'left' },
         {
           type: 'docSidebar',
           sidebarId: 'docsSidebar',
@@ -84,12 +84,13 @@ const config: Config = {
           label: 'Projetos',
           position: 'left',
           items: [
-            {to: '/nidus/', label: 'Nidus'},
-            {to: '/mcibr-csharp/', label: 'MCIBr-CSharp'},
-            {to: '/di/', label: 'InjectContainer'},
+            { to: '/nidus/', label: 'Nidus' },
+            { to: '/mcibr-csharp/', label: 'MCIBr-CSharp' },
+            { to: '/di/', label: 'InjectContainer' },
           ],
         },
-        {type: 'search', position: 'right'},
+        { type: 'localeDropdown', position: 'right' },
+        { type: 'search', position: 'right' },
         {
           href: 'https://github.com/isaquepinheiro',
           label: 'GitHub',
@@ -103,24 +104,24 @@ const config: Config = {
         {
           title: 'Portal',
           items: [
-            {label: 'Início', to: '/'},
-            {label: 'Getting to Know', to: '/getting-to-know/'},
-            {label: 'Roadmap', to: '/roadmap/'},
+            { label: 'Início', to: '/' },
+            { label: 'Getting to Know', to: '/getting-to-know/' },
+            { label: 'Roadmap', to: '/roadmap/' },
           ],
         },
         {
           title: 'Projeto',
           items: [
-            {label: 'MCIBr-CSharp', to: '/mcibr-csharp/'},
-            {label: 'FAQs', to: '/faqs/'},
-            {label: 'Usage Policy', to: '/usage-policy/'},
+            { label: 'MCIBr-CSharp', to: '/mcibr-csharp/' },
+            { label: 'FAQs', to: '/faqs/' },
+            { label: 'Usage Policy', to: '/usage-policy/' },
           ],
         },
         {
           title: 'Links',
           items: [
-            {label: 'Site principal', href: 'https://www.isaquepinheiro.com.br/'},
-            {label: 'GitHub', href: 'https://github.com/isaquepinheiro'},
+            { label: 'Site principal', href: 'https://www.isaquepinheiro.com.br/' },
+            { label: 'GitHub', href: 'https://github.com/isaquepinheiro' },
           ],
         },
       ],

@@ -1,4 +1,4 @@
-import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
+import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -20,9 +20,9 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Projetos',
       items: [
-        {type: 'link', label: 'Nidus', href: '/docs/nidus/'},
-        {type: 'link', label: 'MCIBr-CSharp', href: '/docs/mcibr-csharp/'},
-        {type: 'link', label: 'InjectContainer', href: '/docs/di/'},
+        { type: 'link', label: 'Nidus', href: '/nidus/' },
+        { type: 'link', label: 'MCIBr-CSharp', href: '/mcibr-csharp/' },
+        { type: 'link', label: 'InjectContainer', href: '/di/' },
       ],
     },
     {
@@ -50,7 +50,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Nidus',
-      link: {type: 'doc', id: 'nidus/index'},
+      link: { type: 'doc', id: 'nidus/index' },
       items: [
         'nidus/introduction',
         {
@@ -96,7 +96,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'MCIBr-CSharp',
-      link: {type: 'doc', id: 'mcibr-csharp/index'},
+      link: { type: 'doc', id: 'mcibr-csharp/index' },
       items: [
         'mcibr-csharp/introduction',
         {
@@ -126,7 +126,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'InjectContainer',
-      link: {type: 'doc', id: 'di/index'},
+      link: { type: 'doc', id: 'di/index' },
       items: [
         'di/introduction',
         {

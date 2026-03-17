@@ -1,0 +1,34 @@
+{
+  "logo.alt": {
+    "message": "Tecsis Informática",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Site": {
+    "message": "Site",
+    "description": "Navbar item with label Site"
+  },
+  "item.label.Portal": {
+    "message": "Portal",
+    "description": "Navbar item with label Portal"
+  },
+  "item.label.Projetos": {
+    "message": "Projetos",
+    "description": "Navbar item with label Projetos"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.Nidus": {
+    "message": "Nidus",
+    "description": "Navbar item with label Nidus"
+  },
+  "item.label.MCIBr-CSharp": {
+    "message": "MCIBr-CSharp",
+    "description": "Navbar item with label MCIBr-CSharp"
+  },
+  "item.label.InjectContainer": {
+    "message": "InjectContainer",
+    "description": "Navbar item with label InjectContainer"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docsSidebar.category.Projetos": {
+    "message": "Projetos",
+    "description": "The label for category 'Projetos' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Frequently Asked Questions": {
+    "message": "Frequently Asked Questions",
+    "description": "The label for category 'Frequently Asked Questions' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Guides": {
+    "message": "Guides",
+    "description": "The label for category 'Guides' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Usage Policy": {
+    "message": "Usage Policy",
+    "description": "The label for category 'Usage Policy' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Roadmap": {
+    "message": "Roadmap",
+    "description": "The label for category 'Roadmap' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.link.Nidus": {
+    "message": "Nidus",
+    "description": "The label for link 'Nidus' in sidebar 'docsSidebar', linking to '/docs/nidus/'"
+  },
+  "sidebar.docsSidebar.link.MCIBr-CSharp": {
+    "message": "MCIBr-CSharp",
+    "description": "The label for link 'MCIBr-CSharp' in sidebar 'docsSidebar', linking to '/docs/mcibr-csharp/'"
+  },
+  "sidebar.docsSidebar.link.InjectContainer": {
+    "message": "InjectContainer",
+    "description": "The label for link 'InjectContainer' in sidebar 'docsSidebar', linking to '/docs/di/'"
+  },
+  "sidebar.nidusSidebar.category.Nidus": {
+    "message": "Nidus",
+    "description": "The label for category 'Nidus' in sidebar 'nidusSidebar'"
+  },
+  "sidebar.nidusSidebar.category.Getting Started": {
+    "message": "Getting Started",
+    "description": "The label for category 'Getting Started' in sidebar 'nidusSidebar'"
+  },
+  "sidebar.nidusSidebar.category.Arquitetura": {
+    "message": "Arquitetura",
+    "description": "The label for category 'Arquitetura' in sidebar 'nidusSidebar'"
+  },
+  "sidebar.nidusSidebar.category.Guias": {
+    "message": "Guias",
+    "description": "The label for category 'Guias' in sidebar 'nidusSidebar'"
+  },
+  "sidebar.nidusSidebar.category.Referência": {
+    "message": "Referência",
+    "description": "The label for category 'Referência' in sidebar 'nidusSidebar'"
+  },
+  "sidebar.nidusSidebar.category.Testes e Suporte": {
+    "message": "Testes e Suporte",
+    "description": "The label for category 'Testes e Suporte' in sidebar 'nidusSidebar'"
+  },
+  "sidebar.mcibrSidebar.category.MCIBr-CSharp": {
+    "message": "MCIBr-CSharp",
+    "description": "The label for category 'MCIBr-CSharp' in sidebar 'mcibrSidebar'"
+  },
+  "sidebar.mcibrSidebar.category.Getting Started": {
+    "message": "Getting Started",
+    "description": "The label for category 'Getting Started' in sidebar 'mcibrSidebar'"
+  },
+  "sidebar.mcibrSidebar.category.Arquitetura": {
+    "message": "Arquitetura",
+    "description": "The label for category 'Arquitetura' in sidebar 'mcibrSidebar'"
+  },
+  "sidebar.mcibrSidebar.category.Referência": {
+    "message": "Referência",
+    "description": "The label for category 'Referência' in sidebar 'mcibrSidebar'"
+  },
+  "sidebar.mcibrSidebar.category.Testes e Suporte": {
+    "message": "Testes e Suporte",
+    "description": "The label for category 'Testes e Suporte' in sidebar 'mcibrSidebar'"
+  },
+  "sidebar.injectContainerSidebar.category.InjectContainer": {
+    "message": "InjectContainer",
+    "description": "The label for category 'InjectContainer' in sidebar 'injectContainerSidebar'"
+  },
+  "sidebar.injectContainerSidebar.category.Getting Started": {
+    "message": "Getting Started",
+    "description": "The label for category 'Getting Started' in sidebar 'injectContainerSidebar'"
+  },
+  "sidebar.injectContainerSidebar.category.Conceitos": {
+    "message": "Conceitos",
+    "description": "The label for category 'Conceitos' in sidebar 'injectContainerSidebar'"
+  },
+  "sidebar.injectContainerSidebar.category.Arquitetura": {
+    "message": "Arquitetura",
+    "description": "The label for category 'Arquitetura' in sidebar 'injectContainerSidebar'"
+  },
+  "sidebar.injectContainerSidebar.category.Tutoriais": {
+    "message": "Tutoriais",
+    "description": "The label for category 'Tutoriais' in sidebar 'injectContainerSidebar'"
+  },
+  "sidebar.injectContainerSidebar.category.Referência": {
+    "message": "Referência",
+    "description": "The label for category 'Referência' in sidebar 'injectContainerSidebar'"
+  },
+  "sidebar.injectContainerSidebar.category.Exemplos": {
+    "message": "Exemplos",
+    "description": "The label for category 'Exemplos' in sidebar 'injectContainerSidebar'"
+  },
+  "sidebar.injectContainerSidebar.category.Testes e Suporte": {
+    "message": "Testes e Suporte",
+    "description": "The label for category 'Testes e Suporte' in sidebar 'injectContainerSidebar'"
+  }
+}
