@@ -22,6 +22,7 @@ const sidebars: SidebarsConfig = {
       items: [
         {type: 'link', label: 'Nidus', href: '/docs/nidus/'},
         {type: 'link', label: 'MCIBr-CSharp', href: '/docs/mcibr-csharp/'},
+        {type: 'link', label: 'InjectContainer', href: '/docs/di/'},
       ],
     },
     {
@@ -121,6 +122,54 @@ const sidebars: SidebarsConfig = {
       ],
     },
   ],
+  injectContainerSidebar: [
+    {
+      type: 'category',
+      label: 'InjectContainer',
+      link: {type: 'doc', id: 'di/index'},
+      items: [
+        'di/introduction',
+        {
+          type: 'category',
+          label: 'Getting Started',
+          items: ['di/getting-started/installation', 'di/getting-started/quickstart'],
+        },
+        {
+          type: 'category',
+          label: 'Conceitos',
+          items: ['di/concepts/core-concepts'],
+        },
+        {
+          type: 'category',
+          label: 'Arquitetura',
+          items: ['di/architecture/overview', 'di/architecture/runtime-flow'],
+        },
+        {
+          type: 'category',
+          label: 'Tutoriais',
+          items: ['di/tutorials/common-workflows'],
+        },
+        {
+          type: 'category',
+          label: 'Referência',
+          items: ['di/reference/api'],
+        },
+        {
+          type: 'category',
+          label: 'Exemplos',
+          items: ['di/examples/overview'],
+        },
+        {
+          type: 'category',
+          label: 'Testes e Suporte',
+          items: ['di/tests/overview', 'di/troubleshooting/common-errors', 'di/faq', 'di/roadmap'],
+        },
+      ],
+    },
+  ],
 };
 
 export default sidebars;
+
+
+

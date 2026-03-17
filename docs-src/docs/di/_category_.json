@@ -1,0 +1,8 @@
+{
+    "label": "InjectContainer",
+    "position": 3,
+    "link": {
+        "type": "doc",
+        "id": "di/index"
+    }
+}

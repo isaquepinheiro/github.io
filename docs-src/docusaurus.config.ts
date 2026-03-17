@@ -86,6 +86,7 @@ const config: Config = {
           items: [
             {to: '/nidus/', label: 'Nidus'},
             {to: '/mcibr-csharp/', label: 'MCIBr-CSharp'},
+            {to: '/di/', label: 'InjectContainer'},
           ],
         },
         {type: 'search', position: 'right'},
@@ -143,3 +144,6 @@ const config: Config = {
 };
 
 export default config;
+
+
+
