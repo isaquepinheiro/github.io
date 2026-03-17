@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Tecsis Informática',
   tagline: 'Documentação técnica',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/tecsis-favicon.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -20,6 +20,7 @@ const config: Config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/docs/',
   trailingSlash: true,
+  scripts: [{src: '/docs/js/navbar-dynamic.js', defer: true}],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -53,8 +54,15 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
+    announcementBar: {
+      id: 'docs-quality',
+      content:
+        'Portal técnico da Tecsis Informática com foco em onboarding e referência operacional.',
+      backgroundColor: '#e0ecff',
+      textColor: '#1e3a8a',
+      isCloseable: true,
+    },
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -62,7 +70,7 @@ const config: Config = {
       title: 'Tecsis Informática',
       logo: {
         alt: 'Tecsis Informática',
-        src: 'img/logo.svg',
+        src: 'img/tecsis-logo.svg',
       },
       items: [
         {href: '/', label: 'Site', position: 'left'},
@@ -70,8 +78,11 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'docsSidebar',
           position: 'left',
-          label: 'Docs',
+          label: 'Portal',
         },
+        {to: '/nidus/', label: 'Nidus', position: 'left'},
+        {to: '/mcibr-csharp/', label: 'MCIBr-CSharp', position: 'left'},
+        {type: 'search', position: 'right'},
         {
           href: 'https://github.com/isaquepinheiro',
           label: 'GitHub',
@@ -81,7 +92,31 @@ const config: Config = {
     },
     footer: {
       style: 'light',
-      links: [],
+      links: [
+        {
+          title: 'Portal',
+          items: [
+            {label: 'Início', to: '/'},
+            {label: 'Getting to Know', to: '/getting-to-know/'},
+            {label: 'Roadmap', to: '/roadmap/'},
+          ],
+        },
+        {
+          title: 'Projeto',
+          items: [
+            {label: 'MCIBr-CSharp', to: '/mcibr-csharp/'},
+            {label: 'FAQs', to: '/faqs/'},
+            {label: 'Usage Policy', to: '/usage-policy/'},
+          ],
+        },
+        {
+          title: 'Links',
+          items: [
+            {label: 'Site principal', href: 'https://www.isaquepinheiro.com.br/'},
+            {label: 'GitHub', href: 'https://github.com/isaquepinheiro'},
+          ],
+        },
+      ],
       copyright: `Copyright © ${new Date().getFullYear()} Tecsis Informática.`,
     },
     prism: {

@@ -1,4 +1,5 @@
 ---
+displayed_sidebar: mcibrSidebar
 title: MCIBr-CSharp
 ---
 
@@ -17,4 +18,5 @@ Este projeto é uma biblioteca (não há `Program.cs`/API/console). O ponto de e
 ## Licença e restrições
 
 O repositório do projeto MCIBr-CSharp contém um EULA/termo de uso no `README.md`. Esta documentação descreve como o código está organizado e como ele executa, sem alterar as restrições de uso.
+
 

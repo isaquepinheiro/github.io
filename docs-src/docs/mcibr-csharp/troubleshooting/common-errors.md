@@ -1,3 +1,7 @@
+---
+displayed_sidebar: mcibrSidebar
+---
+
 # Troubleshooting
 
 ## Exceções de pré-condição (NotaFiscal)
@@ -43,4 +47,5 @@ Como resolver:
 
 - Garanta que `Emitente.UFSigla` e `Destinatario.UFSigla` estejam preenchidos
 - Se você usa arquivo de alíquotas, valide se o conteúdo contém `UF=valor` para a UF destino desejada
+
 

@@ -1,3 +1,7 @@
+---
+displayed_sidebar: mcibrSidebar
+---
+
 # Introdução
 
 ## O que é
@@ -30,4 +34,5 @@ Cada `Produto`:
 ## O que não está coberto aqui
 
 Esta documentação descreve estrutura e fluxo **com base no código e testes do repositório**. Quando um comportamento não estiver validado por teste, ele é descrito como “inferido do código”.
+
 

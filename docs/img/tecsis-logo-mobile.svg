@@ -1,0 +1,6 @@
+<svg width="132" height="40" viewBox="0 0 132 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1" y="1" width="38" height="38" rx="10" fill="#1D4ED8"/>
+  <path d="M10 12H30V18H24V30H18V18H10V12Z" fill="white"/>
+  <text x="48" y="25" fill="#0F172A" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">Tecsis</text>
+</svg>
+

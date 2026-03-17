@@ -1,3 +1,7 @@
+---
+displayed_sidebar: mcibrSidebar
+---
+
 # Testes
 
 ## Stack
@@ -38,4 +42,5 @@ Além dos exemplos acima, há diversos testes focados em cenários de ICMS/ICMS-
 - `Cst10IcmsStTests.cs`
 
 > A interpretação de “comportamento esperado” deve ser sempre derivada do que os testes afirmam (Arrange/Act/Assert) em cada arquivo.
+
 

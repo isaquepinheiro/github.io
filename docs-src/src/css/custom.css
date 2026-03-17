@@ -15,6 +15,10 @@
   --ifm-color-primary-lightest: #93c5fd;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docs-navbar-height-default: 62px;
+  --docs-navbar-height-compact: 52px;
+  --docs-logo-height-default: 28px;
+  --docs-logo-height-compact: 22px;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -42,5 +46,136 @@
 }
 
 main .container {
-  max-width: 1140px;
+  max-width: 1200px;
+}
+
+.navbar {
+  min-height: var(--docs-navbar-height-default);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  backdrop-filter: saturate(180%) blur(8px);
+  transition: min-height 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.navbar__title {
+  letter-spacing: 0.2px;
+}
+
+.navbar__logo img {
+  height: var(--docs-logo-height-default);
+  width: auto;
+  transition: height 0.2s ease;
+}
+
+.docs-navbar-compact .navbar {
+  min-height: var(--docs-navbar-height-compact);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+}
+
+.docs-navbar-compact .navbar__logo img {
+  height: var(--docs-logo-height-compact);
+}
+
+.menu__link {
+  border-radius: 8px;
+}
+
+.menu__link:hover {
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.menu__link--active {
+  background: rgba(37, 99, 235, 0.12);
+}
+
+.theme-doc-sidebar-menu {
+  font-size: 0.94rem;
+}
+
+.theme-doc-toc-desktop {
+  font-size: 0.9rem;
+}
+
+.docs-hero {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 28px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  margin-bottom: 24px;
+}
+
+.docs-eyebrow {
+  display: inline-block;
+  margin: 0 0 8px;
+  color: #1d4ed8;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.docs-hero h1 {
+  margin: 0 0 8px;
+}
+
+.docs-hero p {
+  margin: 0;
+  max-width: 780px;
+}
+
+.docs-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.docs-card {
+  display: block;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 18px;
+  color: inherit;
+  text-decoration: none;
+  background: #fff;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.docs-card:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+  border-color: #bfdbfe;
+  box-shadow: 0 10px 24px rgba(30, 41, 59, 0.08);
+}
+
+.docs-card h3 {
+  margin: 0 0 6px;
+}
+
+.docs-card p {
+  margin: 0 0 10px;
+  color: #334155;
+}
+
+.docs-card span {
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+.docs-card-muted {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+@media (max-width: 996px) {
+  :root {
+    --docs-navbar-height-default: 56px;
+    --docs-navbar-height-compact: 48px;
+    --docs-logo-height-default: 24px;
+    --docs-logo-height-compact: 22px;
+  }
+
+  .navbar__logo img {
+    content: url('../../static/img/tecsis-logo-mobile.svg');
+  }
+
+  .navbar__title {
+    display: none;
+  }
 }

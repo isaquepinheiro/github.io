@@ -1,3 +1,7 @@
+---
+displayed_sidebar: mcibrSidebar
+---
+
 # Quickstart
 
 Este quickstart mostra um uso mínimo do motor baseado nas interfaces públicas (`Interfaces/`) e nos fluxos implementados em `Models/ImpostoMotor.cs`, `Models/NotaFiscal.cs` e `Models/Produto.cs`.
@@ -100,4 +104,5 @@ motor.Processar();
 - Se `PrecoUnitario`, `Quantidade` ou `Cfop` do produto estiverem inválidos, `Produto.Processar()` lança `InvalidOperationException`.
 
 Detalhes em: [Troubleshooting](../troubleshooting/common-errors.md).
+
 

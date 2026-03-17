@@ -1,3 +1,7 @@
+---
+displayed_sidebar: mcibrSidebar
+---
+
 # Arquitetura
 
 ## Visão geral
@@ -66,4 +70,5 @@ O `TaxContext` inclui:
 - **Lazy initialization**: `Motor.NotaFiscal`, `NotaFiscal.Emitente`, `NotaFiscal.Destinatario`, `NotaFiscal.Produto`
 - **Separação de contexto**: cálculos recebem `TaxContext` para reduzir acoplamento
 - **Rateio proporcional por valor bruto**: diversos campos do item são rateados como `ValorBruto * (TotalRateio / TotalProdutosNF)` (inferido do código)
+
 

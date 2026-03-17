@@ -1,3 +1,7 @@
+---
+displayed_sidebar: mcibrSidebar
+---
+
 # Referência (API)
 
 Esta página resume a API pública do motor, baseada principalmente no arquivo `Interfaces/MotorInterfaces.cs`.
@@ -70,4 +74,5 @@ Arquivo: `Validations/ValidationPipes.cs`.
 ## Detalhamento completo
 
 O arquivo `Interfaces/MotorInterfaces.cs` contém diversas interfaces de tributos e subcomponentes (ICMS-ST, DIFAL, FCP, RT, etc.). Esta página documenta o “topo” do consumo.
+
 

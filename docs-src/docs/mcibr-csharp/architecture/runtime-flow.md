@@ -1,3 +1,7 @@
+---
+displayed_sidebar: mcibrSidebar
+---
+
 # Runtime Flow
 
 ## Fluxo principal (Motor → NF → Itens → Validações)
@@ -70,4 +74,5 @@ O pipeline de validação (`Validations/ValidationPipes.cs`) funciona assim:
 - Regras/validators adicionam entradas com `ValidationPipes.Add()`
 - Ao final do `Motor.Processar()`, o pipeline executa todos os validadores e acumula mensagens de falha
 - O consumidor pode ler mensagens via `NotaFiscal.ValidationPipes().ListMessages()`
+
 
