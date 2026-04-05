@@ -23,6 +23,7 @@ const sidebars: SidebarsConfig = {
         { type: 'link', label: 'Nidus', href: '/nidus/' },
         { type: 'link', label: 'MCIBr-CSharp', href: '/mcibr-csharp/' },
         { type: 'link', label: 'InjectContainer', href: '/di/' },
+        { type: 'link', label: 'Developer Friends', href: '/developer-friends/' },
       ],
     },
     {
@@ -163,6 +164,42 @@ const sidebars: SidebarsConfig = {
           type: 'category',
           label: 'Testes e Suporte',
           items: ['di/tests/overview', 'di/troubleshooting/common-errors', 'di/faq', 'di/roadmap'],
+        },
+      ],
+    },
+  ],
+  developerFriendsSidebar: [
+    {
+      type: 'category',
+      label: 'Developer Friends',
+      link: { type: 'doc', id: 'developer-friends/index' },
+      items: [
+        'developer-friends/introduction',
+        {
+          type: 'category',
+          label: 'Getting Started',
+          items: ['developer-friends/getting-started/quickstart'],
+        },
+        {
+          type: 'category',
+          label: 'Arquitetura',
+          items: [
+            'developer-friends/architecture/overview',
+            'developer-friends/architecture/runtime-flow',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Referência',
+          items: ['developer-friends/reference/api'],
+        },
+        {
+          type: 'category',
+          label: 'Testes e Suporte',
+          items: [
+            'developer-friends/tests/overview',
+            'developer-friends/troubleshooting/common-errors',
+          ],
         },
       ],
     },

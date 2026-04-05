@@ -87,6 +87,7 @@ const config: Config = {
             { to: '/nidus/', label: 'Nidus' },
             { to: '/mcibr-csharp/', label: 'MCIBr-CSharp' },
             { to: '/di/', label: 'InjectContainer' },
+            { to: '/developer-friends/', label: 'Developer Friends' },
           ],
         },
         { type: 'localeDropdown', position: 'right' },

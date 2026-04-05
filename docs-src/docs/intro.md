@@ -26,6 +26,11 @@ slug: /
     <p>Motor de cálculo tributário em .NET, com documentação de arquitetura, fluxo, referência e troubleshooting.</p>
     <span>Abrir documentação →</span>
   </a>
+  <a class="docs-card" href="/docs/developer-friends/">
+    <h3>Developer Friends</h3>
+    <p>Framework ERP Genérico Cross-Platform Flutter: IDataSet, FieldMetadata, WorkbenchShell e axial_rest_client.</p>
+    <span>Abrir documentação →</span>
+  </a>
   <a class="docs-card docs-card-muted" href="/docs/roadmap/">
     <h3>Roadmap do Portal</h3>
     <p>Planejamento das próximas evoluções da documentação e da estrutura de navegação.</p>
