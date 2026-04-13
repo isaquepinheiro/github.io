@@ -24,6 +24,7 @@ const sidebars: SidebarsConfig = {
         { type: 'link', label: 'MCIBr-CSharp', href: '/mcibr-csharp/' },
         { type: 'link', label: 'InjectContainer', href: '/di/' },
         { type: 'link', label: 'Developer Friends', href: '/developer-friends/' },
+        { type: 'link', label: 'CryptoPilot', href: '/cryptopilot/' },
       ],
     },
     {
@@ -200,6 +201,40 @@ const sidebars: SidebarsConfig = {
             'developer-friends/tests/overview',
             'developer-friends/troubleshooting/common-errors',
           ],
+        },
+      ],
+    },
+  ],
+  cryptopilotSidebar: [
+    {
+      type: 'category',
+      label: 'CryptoPilot',
+      link: { type: 'doc', id: 'cryptopilot/index' },
+      items: [
+        'cryptopilot/introduction',
+        {
+          type: 'category',
+          label: 'Getting Started',
+          items: ['cryptopilot/getting-started/quickstart'],
+        },
+        {
+          type: 'category',
+          label: 'Guias',
+          items: [
+            'cryptopilot/guides/gerenciar-estrategias',
+            'cryptopilot/guides/configurar-risco',
+            'cryptopilot/guides/integrar-tradingview',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Referência',
+          items: ['cryptopilot/reference/configuration'],
+        },
+        {
+          type: 'category',
+          label: 'Suporte',
+          items: ['cryptopilot/troubleshooting/common-errors'],
         },
       ],
     },

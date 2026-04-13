@@ -88,6 +88,7 @@ const config: Config = {
             { to: '/mcibr-csharp/', label: 'MCIBr-CSharp' },
             { to: '/di/', label: 'InjectContainer' },
             { to: '/developer-friends/', label: 'Developer Friends' },
+            { to: '/cryptopilot/', label: 'CryptoPilot' },
           ],
         },
         { type: 'localeDropdown', position: 'right' },

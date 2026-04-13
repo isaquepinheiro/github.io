@@ -31,6 +31,11 @@ slug: /
     <p>Framework ERP Genérico Cross-Platform Flutter: IDataSet, FieldMetadata, WorkbenchShell e axial_rest_client.</p>
     <span>Abrir documentação →</span>
   </a>
+  <a class="docs-card" href="/docs/cryptopilot/">
+    <h3>CryptoPilot</h3>
+    <p>Plataforma de automação de trading de criptomoedas com execução 24/7, controles de risco unificados e integração com TradingView, Whale Alert e copy trading.</p>
+    <span>Abrir documentação →</span>
+  </a>
   <a class="docs-card docs-card-muted" href="/docs/roadmap/">
     <h3>Roadmap do Portal</h3>
     <p>Planejamento das próximas evoluções da documentação e da estrutura de navegação.</p>
