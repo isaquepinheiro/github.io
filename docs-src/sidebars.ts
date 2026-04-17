@@ -25,6 +25,7 @@ const sidebars: SidebarsConfig = {
         { type: 'link', label: 'InjectContainer', href: '/di/' },
         { type: 'link', label: 'Developer Friends', href: '/developer-friends/' },
         { type: 'link', label: 'CryptoPilot', href: '/cryptopilot/' },
+        { type: 'link', label: 'DelphiSense-IA', href: '/delphisense-ia/' },
       ],
     },
     {
@@ -201,6 +202,40 @@ const sidebars: SidebarsConfig = {
             'developer-friends/tests/overview',
             'developer-friends/troubleshooting/common-errors',
           ],
+        },
+      ],
+    },
+  ],
+  delphisenseIaSidebar: [
+    {
+      type: 'category',
+      label: 'DelphiSense-IA',
+      link: { type: 'doc', id: 'delphisense-ia/index' },
+      items: [
+        'delphisense-ia/introduction',
+        {
+          type: 'category',
+          label: 'Getting Started',
+          items: ['delphisense-ia/getting-started/quickstart'],
+        },
+        {
+          type: 'category',
+          label: 'Guides',
+          items: [
+            'delphisense-ia/guides/symbol-indexing',
+            'delphisense-ia/guides/agent-runtime',
+            'delphisense-ia/guides/credentials',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Referência',
+          items: ['delphisense-ia/reference/configuration'],
+        },
+        {
+          type: 'category',
+          label: 'Troubleshooting',
+          items: ['delphisense-ia/troubleshooting/common-errors'],
         },
       ],
     },

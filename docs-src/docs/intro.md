@@ -36,6 +36,11 @@ slug: /
     <p>Plataforma de automação de trading de criptomoedas com execução 24/7, controles de risco unificados e integração com TradingView, Whale Alert e copy trading.</p>
     <span>Abrir documentação →</span>
   </a>
+  <a class="docs-card" href="/docs/delphisense-ia/">
+    <h3>DelphiSense-IA</h3>
+    <p>CLI-first toolkit para Delphi: indexação local de símbolos, agente IA com política de segurança graduada e bridge HTTP para integrações.</p>
+    <span>Abrir documentação →</span>
+  </a>
   <a class="docs-card docs-card-muted" href="/docs/roadmap/">
     <h3>Roadmap do Portal</h3>
     <p>Planejamento das próximas evoluções da documentação e da estrutura de navegação.</p>

@@ -89,6 +89,7 @@ const config: Config = {
             { to: '/di/', label: 'InjectContainer' },
             { to: '/developer-friends/', label: 'Developer Friends' },
             { to: '/cryptopilot/', label: 'CryptoPilot' },
+            { to: '/delphisense-ia/', label: 'DelphiSense-IA' },
           ],
         },
         { type: 'localeDropdown', position: 'right' },
