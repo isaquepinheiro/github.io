@@ -24,6 +24,7 @@ const sidebars: SidebarsConfig = {
         { type: 'link', label: 'MCIBr-CSharp', href: '/mcibr-csharp/' },
         { type: 'link', label: 'InjectContainer', href: '/di/' },
         { type: 'link', label: 'Developer Friends', href: '/developer-friends/' },
+        { type: 'link', label: 'ERP-Axial', href: '/erp-axial/' },
         { type: 'link', label: 'CryptoPilot', href: '/cryptopilot/' },
         { type: 'link', label: 'DelphiSense-IA', href: '/delphisense-ia/' },
       ],
@@ -236,6 +237,31 @@ const sidebars: SidebarsConfig = {
           type: 'category',
           label: 'Troubleshooting',
           items: ['delphisense-ia/troubleshooting/common-errors'],
+        },
+      ],
+    },
+  ],
+  erpAxialSidebar: [
+    {
+      type: 'category',
+      label: 'ERP-Axial',
+      link: { type: 'doc', id: 'erp-axial/index' },
+      items: [
+        'erp-axial/introduction',
+        {
+          type: 'category',
+          label: 'Getting Started',
+          items: ['erp-axial/getting-started/quickstart'],
+        },
+        {
+          type: 'category',
+          label: 'Referência',
+          items: ['erp-axial/reference/configuration'],
+        },
+        {
+          type: 'category',
+          label: 'Suporte',
+          items: ['erp-axial/troubleshooting/common-errors'],
         },
       ],
     },
