@@ -11,7 +11,7 @@ CryptoPilot é uma plataforma full-stack de automação de trading de criptomoed
 
 A plataforma opera 24 horas por dia, 7 dias por semana, eliminando a necessidade de monitoramento manual e garantindo que todas as decisões de ordem passem pelos mesmos limites de drawdown, circuit breakers e regras de proteção de capital definidos pelo trader.
 
-A versão v0.1.0 entrega a fundação da plataforma: ambiente Docker, autenticação JWT e o módulo de Estratégias completo (criação, edição, ativação, duplicação e exclusão com validação de configuração por tipo).
+A versão v0.9.0 consolida as três primeiras fases da plataforma: fundação (auth, Docker, estratégias), motor de trading (ativos, trades, engine, bots), e fontes de sinal externas (Whale Alert, Copy Trading, TradingView). Backtesting, análise de IA via Claude, notificações (Telegram e Discord) e o painel de controle completo estão entregues e operacionais. A v0.9.0 adiciona o novo Dashboard Bento Dense v2.0 com layout Hi-Fi redesenhado, paleta de comandos (Ctrl+K), gráficos TradingView embutidos por ativo, gerenciamento de ciclo de vida de posições via Bot Manager, e sincronização nativa de copy trades da Binance Leaderboard e Hyperliquid.
 
 ## Para quem é este manual
 

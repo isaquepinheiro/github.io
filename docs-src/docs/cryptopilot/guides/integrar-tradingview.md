@@ -3,21 +3,13 @@ displayed_sidebar: cryptopilotSidebar
 title: Integrar TradingView
 ---
 
-# Integrar TradingView
-
 **Audiência:** Traders com assinatura TradingView Pro ou superior  
-**Pré-requisitos:** CryptoPilot rodando e acessível via URL pública; estratégia ativa configurada  
-**Resultado:** Alertas Pine Script do TradingView executam ordens no CryptoPilot automaticamente
-
-:::note Funcionalidade planejada
-A integração com TradingView via webhook está especificada e será entregue em uma versão futura. Este guia descreve o fluxo planejado com base na especificação oficial do produto.
-:::
-
----
+**Pré-requisitos:** CryptoPilot rodando e acessível via URL pública (`APP_URL` configurada no `.env`); ativo e estratégia ativos  
+**Resultado:** Alertas Pine Script do TradingView executam ordens no CryptoPilot automaticamente via webhook autenticado
 
 ## Como funciona
 
-```
+```text
 TradingView Alert (Pine Script)
     ↓
 POST /api/v1/webhooks/tv  (payload JSON com secret)
@@ -57,7 +49,7 @@ Registro de auditoria + notificação Telegram/Discord
 3. Configure as opções de execução:
 
    | Opção | Descrição |
-   |-------|-----------|
+   | ------- | ----------- |
    | `is_enabled` | Habilita/desabilita o recebimento de sinais |
    | `auto_execute` | Executa ordens automaticamente ao receber o sinal |
    | `require_confirmation` | Enfileira o sinal para aprovação manual antes de executar |
@@ -74,7 +66,7 @@ Registro de auditoria + notificação Telegram/Discord
 
 3. Na aba **Notificações** do alerta, habilite **Webhook URL** e insira:
 
-   ```
+   ```text
    https://seudominio.com/api/v1/webhooks/tv
    ```
 
