@@ -34,11 +34,26 @@ Executa prompts de análise e automação com quatro modos de operação:
 ### Diagnóstico de ambiente (`doctor`)
 Valida em um único comando: acesso ao workspace, configuração, índice de símbolos, credenciais, journal e conectividade com o provider.
 
-### Bridge HTTP local
-Servidor HTTP em loopback que expõe o índice para ferramentas externas e futuras integrações com o RAD Studio via OTA.
+### Bridge IPC local (HTTP + Named-Pipe)
+Servidor de integração que expõe o índice e o agente via HTTP loopback (`127.0.0.1:7777`) e, no Windows, via named-pipe JSON-RPC 2.0 (`\\.\pipe\delphisense-*`). O transporte named-pipe é o canal primário do plugin OTA para RAD Studio.
 
 ### Journal de operações e rollback
 Todas as escritas do agente são registradas em log auditável. Qualquer arquivo pode ser revertido ao estado anterior via `agent rollback undo <operation_id>`.
+
+## Plugin OTA para RAD Studio
+
+A partir da v0.19.0, o plugin OTA para RAD Studio está funcional com as seguintes capacidades:
+
+| Atalho | Função |
+|--------|--------|
+| `Ctrl+Alt+F12` | Busca símbolo sob o cursor e navega para o resultado |
+| `Ctrl+Alt+F10` | Envia seleção do editor para o agente IA e exibe achados |
+| `Ctrl+Alt+F9` | Valida status das credenciais de todos os providers |
+| `Ctrl+Alt+F11` | Abre visualizador do journal de operações do agente |
+| `Ctrl+Alt+F8` | Pré-visualiza diff inline via `--dry-run` para o arquivo atual |
+| Menu `DelphiSense` | Acesso a todas as funções via menu principal do IDE |
+
+O plugin requer o bridge CLI em execução (`delphisense bridge --pipe`) e RAD Studio 10.3 ou superior.
 
 ## Providers suportados
 

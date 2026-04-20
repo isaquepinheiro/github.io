@@ -17,7 +17,7 @@ Este guia leva você do binário instalado até o primeiro resultado do agente e
 delphisense --version
 ```
 
-Se o comando retornar a versão (ex.: `0.18.0`), a instalação está correta. Caso contrário, verifique se o binário está no `PATH`.
+Se o comando retornar a versão (ex.: `0.21.0`), a instalação está correta. Caso contrário, verifique se o binário está no `PATH`.
 
 ## 2. Diagnosticar o ambiente
 

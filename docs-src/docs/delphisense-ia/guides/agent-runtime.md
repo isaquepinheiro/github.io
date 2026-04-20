@@ -19,7 +19,7 @@ Recomendação: use `assisted` no dia a dia e `autonomous` apenas em ambientes i
 ## Executar um prompt simples
 
 ```bash
-delphisense agent run "<prompt>" --mode <suggest|confirm|auto>
+delphisense agent run "<prompt>" --mode <suggest|confirm|auto> [--tier <tier>] [--dry-run] [--json]
 ```
 
 Exemplos:
@@ -33,6 +33,28 @@ delphisense agent run "Extraia a lógica de validação de TClienteForm para uma
 
 # Automação total (cuidado!)
 delphisense agent run "Adicione logging em todos os métodos públicos de TClienteService" --mode auto
+
+# Pré-visualizar escritas como diff sem aplicá-las
+delphisense agent run "Adicione docstring nos métodos públicos" --mode confirm --dry-run
+
+# Saída dos achados em JSON
+delphisense agent run "Liste as dependências externas deste módulo" --mode suggest --json
+```
+
+### Flag `--tier`
+
+Sobrepõe o tier derivado do `--mode`. Use quando precisar de controle preciso sobre a política de confirmação sem mudar o modo de operação:
+
+```bash
+delphisense agent run "<prompt>" --mode confirm --tier supervised
+```
+
+### Flag `--dry-run`
+
+Pré-visualiza qualquer operação de escrita como diff unificado sem aplicar mudanças. Compatível com `suggest`, `confirm` e `auto`:
+
+```bash
+delphisense agent run "<prompt>" --mode confirm --dry-run
 ```
 
 ## Pipeline de múltiplas etapas
@@ -40,7 +62,7 @@ delphisense agent run "Adicione logging em todos os métodos públicos de TClien
 Para análises mais complexas, o agente pode executar uma sequência de passos:
 
 ```bash
-delphisense agent pipeline "<prompt>" --steps 5
+delphisense agent pipeline "<prompt>" --steps 5 [--tier <tier>] [--dry-run] [--json]
 ```
 
 Cada etapa é registrada no journal para auditoria e rollback.
@@ -88,11 +110,14 @@ Cada ação do agente é registrada em `.delphisense/agent-journal.jsonl`. Use o
 # Listar as últimas 20 operações
 delphisense agent journal list --limit 20
 
-# Filtrar por tipo de operação
-delphisense agent journal list --type write
+# Filtrar por tipo de evento (ex.: started, completed, failed, rollback_executed)
+delphisense agent journal list --type completed
 
 # Filtrar por data
 delphisense agent journal list --since 2025-01-01
+
+# Filtrar por correlation ID (rastreabilidade entre sessões)
+delphisense agent journal list --correlation-id <id>
 
 # Saída JSON
 delphisense agent journal list --format json

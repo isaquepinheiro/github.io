@@ -226,6 +226,7 @@ const sidebars: SidebarsConfig = {
             'delphisense-ia/guides/symbol-indexing',
             'delphisense-ia/guides/agent-runtime',
             'delphisense-ia/guides/credentials',
+            'delphisense-ia/guides/ota-plugin',
           ],
         },
         {

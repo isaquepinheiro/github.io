@@ -17,5 +17,5 @@ CLI-first toolkit para projetos Delphi com indexação local de símbolos, runti
 
 ## Escopo
 
-- **Cobre:** indexação local de símbolos Delphi, busca semântica offline, agente IA com política de segurança graduada, bridge HTTP para integrações, diagnósticos de ambiente.
+- **Cobre:** indexação local de símbolos Delphi, busca semântica offline, agente IA com política de segurança graduada, bridge HTTP + named-pipe para integrações, plugin OTA para RAD Studio (v0.19.0+), diagnósticos de ambiente.
 - **Não cobre:** compilação de projetos Delphi, execução de código gerado pelo agente sem aprovação explícita, acesso remoto fora do loopback.

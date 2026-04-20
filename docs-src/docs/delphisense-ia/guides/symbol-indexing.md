@@ -95,23 +95,59 @@ Exemplo de resposta JSON:
 
 Queries vazias são rejeitadas com erro imediato.
 
-## Bridge HTTP (integração externa)
+## Bridge HTTP e Named-Pipe (integração externa)
 
-O comando `bridge` expõe o índice via HTTP local, permitindo que editores e scripts consultem símbolos sem depender do CLI diretamente:
+O comando `bridge` expõe o índice via dois transportes para que editores e scripts consultem símbolos sem depender do CLI diretamente.
+
+### HTTP (loopback)
 
 ```bash
-# Iniciar a bridge na porta padrão (7777)
+# Iniciar a bridge HTTP na porta padrão (7777)
 delphisense bridge
 
 # Porta personalizada
 delphisense bridge --port 8080
 ```
 
-Endpoint de busca:
+Endpoint de busca (v1):
 
 ```
-POST http://127.0.0.1:7777/symbol/find
+POST http://127.0.0.1:7777/v1/symbol/find
 Content-Type: application/json
 
 {"query": "TClienteService", "limit": 10}
+```
+
+Endpoints disponíveis:
+
+| Método | Caminho | Descrição |
+|--------|---------|-----------|
+| `GET`  | `/v1/health` | Verificação de saúde |
+| `POST` | `/v1/symbol/find` | Busca de símbolos |
+| `POST` | `/v1/agent/suggest` | Sugestão via agente |
+| `POST` | `/v1/project/index` | Indexar projeto |
+
+### Named-Pipe JSON-RPC 2.0 (Windows — transporte primário para OTA)
+
+```bash
+# Iniciar servidor named-pipe
+delphisense bridge --pipe
+
+# Nome de pipe personalizado
+delphisense bridge --pipe-name minha-instancia
+```
+
+O pipe é criado em `\\.\pipe\delphisense-*`. Os métodos JSON-RPC 2.0 disponíveis são:
+
+| Método | Equivalente HTTP |
+|--------|-----------------|
+| `delphisense.health` | `GET /v1/health` |
+| `delphisense.symbol.find` | `POST /v1/symbol/find` |
+| `delphisense.agent.suggest` | `POST /v1/agent/suggest` |
+| `delphisense.project.index` | `POST /v1/project/index` |
+
+### Ambos os transportes simultaneamente
+
+```bash
+delphisense bridge --port 7777 --pipe
 ```

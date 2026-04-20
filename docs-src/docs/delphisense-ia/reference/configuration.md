@@ -31,7 +31,7 @@ Disponíveis em qualquer comando:
 | `config set <key> <value>` | Define uma chave de configuração |
 | `config get <key>` | Lê uma chave de configuração |
 | `config list` | Lista todas as chaves configuradas |
-| `config credential set <provider>` | Armazena chave de API no keychain |
+| `config credential set <provider> [--value KEY]` | Armazena chave de API no keychain (interativo ou via `--value` para automação) |
 | `config credential get <provider>` | Exibe chave mascarada e fonte |
 | `config credential delete <provider>` | Remove chave do keychain |
 | `config credential list` | Lista status de todos os providers |
@@ -48,13 +48,27 @@ Disponíveis em qualquer comando:
 
 | Subcomando | Flags | Descrição |
 |------------|-------|-----------|
-| `agent run <prompt>` | `--mode`, `--allow-ops`, `--approve-ops` | Executa prompt no agente |
-| `agent pipeline <prompt>` | `--steps N`, `--mode` | Pipeline de múltiplas etapas |
-| `agent journal list` | `--limit N`, `--type`, `--since`, `--format` | Lista entradas do journal |
+| `agent run <prompt>` | `--mode`, `--tier`, `--allow-ops`, `--approve-ops`, `--dry-run`, `--json` | Executa prompt no agente |
+| `agent pipeline <prompt>` | `--steps N`, `--mode`, `--tier`, `--allow-ops`, `--approve-ops`, `--dry-run`, `--json` | Pipeline de múltiplas etapas |
+| `agent journal list` | `--limit N`, `--type`, `--since`, `--correlation-id`, `--format` | Lista entradas do journal |
 | `agent journal stats` | — | Estatísticas do journal |
 | `agent journal prune` | `--dry-run` | Remove entradas antigas |
 | `agent rollback list` | — | Lista snapshots de rollback |
 | `agent rollback undo <id>` | — | Reverte arquivo ao estado pré-operação |
+
+Detalhes das novas flags de `agent run` e `agent pipeline`:
+
+| Flag | Valores | Descrição |
+|------|---------|-----------|
+| `--tier` | `readonly`, `assisted`, `supervised`, `autonomous` | Sobrepõe o tier derivado de `--mode` |
+| `--dry-run` | (sem valor) | Pré-visualiza escritas como diff; não aplica mudanças |
+| `--json` | (sem valor) | Emite achados em JSON em vez de texto tabular |
+
+Detalhes das novas flags de `agent journal list`:
+
+| Flag | Valores | Descrição |
+|------|---------|-----------|
+| `--correlation-id` | string | Filtra entradas pelo correlation ID da sessão |
 
 ### doctor
 
@@ -64,7 +78,9 @@ Sem flags adicionais. Valida todos os subsistemas do workspace.
 
 | Flag | Padrão | Descrição |
 |------|--------|-----------|
-| `--port` | `7777` | Porta do servidor HTTP local |
+| `--port` / `-p` | `7777` | Porta do servidor HTTP loopback |
+| `--pipe` | (sem valor) | Inicia servidor named-pipe JSON-RPC 2.0 (Windows, transporte primário OTA) |
+| `--pipe-name` | `delphisense-*` | Override do nome do named-pipe (implica `--pipe`) |
 
 ## Chaves de configuração do workspace
 
