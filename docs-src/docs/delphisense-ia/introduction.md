@@ -31,6 +31,9 @@ Executa prompts de análise e automação com quatro modos de operação:
 | `supervised` | Verifica limites do workspace automaticamente; confirma operações perigosas |
 | `autonomous` | Aprova todas as operações automaticamente (use com cautela) |
 
+### Registro de Agentes Personalizados
+Crie agentes nomeados com role/persona e payload de skill armazenados em SQLite. Invoque-os via `agent invoke <nome>` ou diretamente como subcomandos de nível superior (`delphisense <nome> "<prompt>"`). Suporta modo pipeline com múltiplas etapas.
+
 ### Diagnóstico de ambiente (`doctor`)
 Valida em um único comando: acesso ao workspace, configuração, índice de símbolos, credenciais, journal e conectividade com o provider.
 

@@ -50,6 +50,10 @@ Disponíveis em qualquer comando:
 |------------|-------|-----------|
 | `agent run <prompt>` | `--mode`, `--tier`, `--allow-ops`, `--approve-ops`, `--dry-run`, `--json` | Executa prompt no agente |
 | `agent pipeline <prompt>` | `--steps N`, `--mode`, `--tier`, `--allow-ops`, `--approve-ops`, `--dry-run`, `--json` | Pipeline de múltiplas etapas |
+| `agent invoke <nome> <prompt>` | `--mode`, `--steps N`, `--dry-run`, `--json` | Invoca agente nomeado do registro |
+| `agent registry create <nome>` | `--role`, `--skill` | Cria agente nomeado no registro |
+| `agent registry list` | — | Lista agentes registrados |
+| `agent registry delete <nome>` | — | Remove agente do registro |
 | `agent journal list` | `--limit N`, `--type`, `--since`, `--correlation-id`, `--format` | Lista entradas do journal |
 | `agent journal stats` | — | Estatísticas do journal |
 | `agent journal prune` | `--dry-run` | Remove entradas antigas |
@@ -63,6 +67,17 @@ Detalhes das novas flags de `agent run` e `agent pipeline`:
 | `--tier` | `readonly`, `assisted`, `supervised`, `autonomous` | Sobrepõe o tier derivado de `--mode` |
 | `--dry-run` | (sem valor) | Pré-visualiza escritas como diff; não aplica mudanças |
 | `--json` | (sem valor) | Emite achados em JSON em vez de texto tabular |
+
+Detalhes das flags de `agent invoke`:
+
+| Flag | Valores | Descrição |
+|------|---------|-----------|
+| `--mode` | `suggest`, `pipeline` | Modo de execução do agente nomeado |
+| `--steps` | inteiro ≥ 1 | Número de etapas (apenas com `--mode pipeline`) |
+| `--dry-run` | (sem valor) | Pré-visualiza escritas sem aplicar mudanças |
+| `--json` | (sem valor) | Emite achados em JSON |
+
+**Aliases dinâmicos:** agentes registrados são invocáveis como subcomandos de nível superior — `delphisense <nome> "<prompt>"` equivale a `delphisense agent invoke <nome> "<prompt>"`.
 
 Detalhes das novas flags de `agent journal list`:
 

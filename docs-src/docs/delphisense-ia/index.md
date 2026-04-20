@@ -11,11 +11,12 @@ CLI-first toolkit para projetos Delphi com indexação local de símbolos, runti
 - [Quickstart](getting-started/quickstart.md)
 - [Indexação de Símbolos](guides/symbol-indexing.md)
 - [Runtime do Agente IA](guides/agent-runtime.md)
+- [Agentes Personalizados](guides/custom-agents.md)
 - [Credenciais e Providers](guides/credentials.md)
 - [Referência de Configuração](reference/configuration.md)
 - [Troubleshooting](troubleshooting/common-errors.md)
 
 ## Escopo
 
-- **Cobre:** indexação local de símbolos Delphi, busca semântica offline, agente IA com política de segurança graduada, bridge HTTP + named-pipe para integrações, plugin OTA para RAD Studio (v0.19.0+), diagnósticos de ambiente.
+- **Cobre:** indexação local de símbolos Delphi, busca semântica offline, agente IA com política de segurança graduada, registro de agentes personalizados com aliases dinâmicos (v0.22.0+), bridge HTTP + named-pipe para integrações, plugin OTA para RAD Studio (v0.19.0+), diagnósticos de ambiente.
 - **Não cobre:** compilação de projetos Delphi, execução de código gerado pelo agente sem aprovação explícita, acesso remoto fora do loopback.
