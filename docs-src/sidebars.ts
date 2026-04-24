@@ -185,6 +185,14 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'category',
+          label: 'Guias',
+          items: [
+            'developer-friends/guides/criar-rotina',
+            'developer-friends/guides/configurar-permissoes',
+          ],
+        },
+        {
+          type: 'category',
           label: 'Arquitetura',
           items: [
             'developer-friends/architecture/overview',
@@ -194,7 +202,10 @@ const sidebars: SidebarsConfig = {
         {
           type: 'category',
           label: 'Referência',
-          items: ['developer-friends/reference/api'],
+          items: [
+            'developer-friends/reference/api',
+            'developer-friends/reference/configuration',
+          ],
         },
         {
           type: 'category',
