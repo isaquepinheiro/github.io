@@ -27,6 +27,7 @@ const sidebars: SidebarsConfig = {
         { type: 'link', label: 'ERP-Axial', href: '/erp-axial/' },
         { type: 'link', label: 'CryptoPilot', href: '/cryptopilot/' },
         { type: 'link', label: 'DelphiSense-IA', href: '/delphisense-ia/' },
+        { type: 'link', label: 'Janus ORM', href: '/janus/' },
       ],
     },
     {
@@ -275,6 +276,49 @@ const sidebars: SidebarsConfig = {
           type: 'category',
           label: 'Suporte',
           items: ['erp-axial/troubleshooting/common-errors'],
+        },
+      ],
+    },
+  ],
+  janusSidebar: [
+    {
+      type: 'category',
+      label: 'Janus ORM',
+      link: { type: 'doc', id: 'janus/index' },
+      items: [
+        'janus/introduction',
+        {
+          type: 'category',
+          label: 'Getting Started',
+          items: ['janus/getting-started/quickstart'],
+        },
+        {
+          type: 'category',
+          label: 'Guias',
+          items: [
+            'janus/guides/primeiro-crud-com-dataset',
+            'janus/guides/operacao-master-detail',
+            'janus/guides/objectset',
+            'janus/guides/consultas-personalizadas',
+            'janus/guides/nullable',
+            'janus/guides/lazy-loading',
+            'janus/guides/livebindings',
+            'janus/guides/monitor-sql',
+            'janus/guides/eventos-middleware',
+            'janus/guides/codegen',
+            'janus/guides/json',
+            'janus/guides/restful',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Referência',
+          items: ['janus/reference/configuration'],
+        },
+        {
+          type: 'category',
+          label: 'Suporte',
+          items: ['janus/troubleshooting/common-errors'],
         },
       ],
     },

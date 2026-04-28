@@ -46,6 +46,11 @@ slug: /
     <p>CLI-first toolkit para Delphi: indexação local de símbolos, agente IA com política de segurança graduada e bridge HTTP para integrações.</p>
     <span>Abrir documentação →</span>
   </a>
+  <a class="docs-card" href="/docs/janus/">
+    <h3>Janus ORM</h3>
+    <p>ORM para Delphi: mapeamento por atributos, CRUD automático, lazy loading, LiveBindings, REST/Horse e suporte a 13+ bancos de dados.</p>
+    <span>Abrir documentação →</span>
+  </a>
   <a class="docs-card docs-card-muted" href="/docs/roadmap/">
     <h3>Roadmap do Portal</h3>
     <p>Planejamento das próximas evoluções da documentação e da estrutura de navegação.</p>
