@@ -51,6 +51,11 @@ slug: /
     <p>ORM para Delphi: mapeamento por atributos, CRUD automático, lazy loading, LiveBindings, REST/Horse e suporte a 13+ bancos de dados.</p>
     <span>Abrir documentação →</span>
   </a>
+  <a class="docs-card" href="/docs/suportia-tools/">
+    <h3>SuportIA Tools</h3>
+    <p>CLI do operador para o sistema SuportIA: publicação de telas ERP, multi-profile TOML config, reindex e smoke tests contra instâncias ao vivo.</p>
+    <span>Abrir documentação →</span>
+  </a>
   <a class="docs-card docs-card-muted" href="/docs/roadmap/">
     <h3>Roadmap do Portal</h3>
     <p>Planejamento das próximas evoluções da documentação e da estrutura de navegação.</p>

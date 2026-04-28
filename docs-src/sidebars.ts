@@ -28,6 +28,7 @@ const sidebars: SidebarsConfig = {
         { type: 'link', label: 'CryptoPilot', href: '/cryptopilot/' },
         { type: 'link', label: 'DelphiSense-IA', href: '/delphisense-ia/' },
         { type: 'link', label: 'Janus ORM', href: '/janus/' },
+        { type: 'link', label: 'SuportIA Tools', href: '/suportia-tools/' },
       ],
     },
     {
@@ -319,6 +320,39 @@ const sidebars: SidebarsConfig = {
           type: 'category',
           label: 'Suporte',
           items: ['janus/troubleshooting/common-errors'],
+        },
+      ],
+    },
+  ],
+  suportiaToolsSidebar: [
+    {
+      type: 'category',
+      label: 'SuportIA Tools',
+      link: { type: 'doc', id: 'suportia-tools/index' },
+      items: [
+        'suportia-tools/introduction',
+        {
+          type: 'category',
+          label: 'Getting Started',
+          items: ['suportia-tools/getting-started/quickstart'],
+        },
+        {
+          type: 'category',
+          label: 'Guides',
+          items: [
+            'suportia-tools/guides/publish-screen',
+            'suportia-tools/guides/configure-profiles',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Reference',
+          items: ['suportia-tools/reference/configuration'],
+        },
+        {
+          type: 'category',
+          label: 'Troubleshooting',
+          items: ['suportia-tools/troubleshooting/common-errors'],
         },
       ],
     },
